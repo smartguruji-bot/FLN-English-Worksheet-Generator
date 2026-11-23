@@ -1,0 +1,2789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMARTGURUJI – English FLN LO-Based Work Sheet Generator | Classes 4 to 10</title>
+  <style>
+    /* ==========================================================================
+       SMARTGURUJI – ENGLISH FLN LO-BASED WORK SHEET GENERATOR (SCOPED STYLES)
+       Namespace: sgflnpractice2026_
+       ========================================================================== */
+    body {
+      margin: 0;
+      padding: 12px;
+      background: #e9eff7;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #sgflnpractice2026_root,
+    #sgflnpractice2026_root * {
+      box-sizing: border-box;
+    }
+
+    #sgflnpractice2026_root {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #1a202c;
+      background: #f4f7fb;
+      padding: 18px;
+      border-radius: 12px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_hidden {
+      display: none !important;
+    }
+
+    /* Top Banner */
+    #sgflnpractice2026_root .sgflnpractice2026_banner {
+      background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+      color: #ffffff;
+      padding: 20px 22px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.14);
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_brand_tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_banner h1 {
+      margin: 0 0 6px 0;
+      font-size: 1.55rem;
+      line-height: 1.3;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_banner p {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #e6fffa;
+    }
+
+    /* Dashboard Panel */
+    #sgflnpractice2026_root .sgflnpractice2026_panel {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_panel_title {
+      margin: 0 0 14px 0;
+      font-size: 1.35rem;
+      color: #1e3a8a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field_wide {
+      grid-column: span 2;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field_full {
+      grid-column: span 3;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field input,
+    #sgflnpractice2026_root .sgflnpractice2026_field select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      border: 1.5px solid #94a3b8;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field input:focus,
+    #sgflnpractice2026_root .sgflnpractice2026_field select:focus {
+      border-color: #1d4ed8;
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_field input[readonly] {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_lo_box {
+      background: #eff6ff;
+      border-left: 4px solid #1d4ed8;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_alert {
+      background: #fef2f2;
+      border: 1.5px solid #dc2626;
+      color: #991b1b;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-top: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_status_bar {
+      background: #ecfdf5;
+      border: 1px solid #10b981;
+      color: #065f46;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-top: 14px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* Action Buttons */
+    #sgflnpractice2026_root .sgflnpractice2026_actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_btn {
+      padding: 11px 16px;
+      font-size: 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      color: #ffffff;
+      transition: opacity 0.15s ease;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_btn:hover {
+      opacity: 0.92;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_btn_primary { background: #1d4ed8; }
+    #sgflnpractice2026_root .sgflnpractice2026_btn_secondary { background: #0f766e; }
+    #sgflnpractice2026_root .sgflnpractice2026_btn_success { background: #15803d; }
+    #sgflnpractice2026_root .sgflnpractice2026_btn_pdf { background: #7c3aed; }
+    #sgflnpractice2026_root .sgflnpractice2026_btn_toggle { background: #b45309; }
+    #sgflnpractice2026_root .sgflnpractice2026_btn_reset { background: #475569; }
+
+    /* ==========================================================================
+       WORKSHEET SHEET CONTAINER (A4 FRIENDLY & B&W PRINT READY)
+       ========================================================================== */
+    #sgflnpractice2026_root .sgflnpractice2026_sheet {
+      position: relative;
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #1e293b;
+      border-radius: 6px;
+      padding: 24px 26px;
+      margin-bottom: 26px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-32deg);
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.045);
+      letter-spacing: 5px;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_sheet_inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Repeating Print Table Wrapper for Multi-Page Header Support */
+    #sgflnpractice2026_root .sgflnpractice2026_print_wrap {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_print_wrap > thead > tr > th,
+    #sgflnpractice2026_root .sgflnpractice2026_print_wrap > tbody > tr > td {
+      padding: 0;
+      border: none;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_repeat_head {
+      display: none;
+    }
+
+    /* Worksheet Header */
+    #sgflnpractice2026_root .sgflnpractice2026_ws_header {
+      border-bottom: 2px solid #000000;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_top {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #000000;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-top: 2px;
+      color: #000000;
+      letter-spacing: 0.4px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_meta {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.2rem;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_meta td {
+      padding: 5px 8px;
+      border: 1px solid #333333;
+      vertical-align: top;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ws_lo_strip {
+      margin-top: 8px;
+      padding: 7px 10px;
+      background: #f3f4f6;
+      border: 1px solid #000000;
+      font-size: 1.2rem;
+    }
+
+    /* Activity Block */
+    #sgflnpractice2026_root .sgflnpractice2026_activity {
+      border: 1px solid #333333;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      background: #ffffff;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_act_head {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #000000;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed #666666;
+      padding-bottom: 4px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_act_lang {
+      font-size: 1.2rem;
+      color: #222222;
+      font-weight: 400;
+      margin-top: 2px;
+      display: block;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_act_body {
+      font-size: 1.2rem;
+      color: #000000;
+      margin-top: 8px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_act_body p {
+      margin: 0 0 8px 0;
+    }
+
+    /* Reading Passage Box */
+    #sgflnpractice2026_root .sgflnpractice2026_passage {
+      background: #f8f9fa;
+      border: 1.5px solid #000000;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_passage_title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      text-decoration: underline;
+    }
+
+    /* Tables & Chips */
+    #sgflnpractice2026_root .sgflnpractice2026_table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 1.2rem;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_table th,
+    #sgflnpractice2026_root .sgflnpractice2026_table td {
+      border: 1px solid #000000;
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_table th {
+      background: #eeeeee;
+      font-weight: 700;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_chip_row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_chip {
+      display: inline-block;
+      border: 1.5px solid #000000;
+      padding: 4px 11px;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: #ffffff;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_word_bank {
+      border: 1px dashed #000000;
+      background: #f8f9fa;
+      padding: 6px 10px;
+      margin: 6px 0 10px 0;
+      font-size: 1.2rem;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_line {
+      border-bottom: 1px solid #000000;
+      height: 28px;
+      margin-bottom: 6px;
+      width: 100%;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_draw_box {
+      border: 1.5px solid #000000;
+      height: 105px;
+      width: 100%;
+      margin-top: 8px;
+      background: #ffffff;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_q_list {
+      margin: 6px 0 0 0;
+      padding-left: 22px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_q_list li {
+      margin-bottom: 8px;
+    }
+
+    /* Teacher Observation Box */
+    #sgflnpractice2026_root .sgflnpractice2026_obs_box {
+      border: 2px solid #000000;
+      padding: 12px 14px;
+      margin-top: 18px;
+      background: #fafafa;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_obs_title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_check_row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 8px 0;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_box_sq {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #000000;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    /* Footer */
+    #sgflnpractice2026_root .sgflnpractice2026_ws_footer {
+      margin-top: 16px;
+      padding-top: 8px;
+      border-top: 1px solid #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 1.2rem;
+      color: #222222;
+    }
+
+    /* Answer Key Styling */
+    #sgflnpractice2026_root .sgflnpractice2026_ak_sheet {
+      border: 2px solid #000000;
+      background: #ffffff;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ak_banner {
+      background: #eeeeee;
+      border-bottom: 2px solid #000000;
+      padding: 10px 14px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    #sgflnpractice2026_root .sgflnpractice2026_ak_item {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dotted #666666;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 820px) {
+      body {
+        padding: 6px;
+      }
+      #sgflnpractice2026_root {
+        padding: 12px;
+      }
+      #sgflnpractice2026_root .sgflnpractice2026_grid {
+        grid-template-columns: 1fr;
+      }
+      #sgflnpractice2026_root .sgflnpractice2026_field_wide,
+      #sgflnpractice2026_root .sgflnpractice2026_field_full {
+        grid-column: span 1;
+      }
+      #sgflnpractice2026_root .sgflnpractice2026_sheet {
+        padding: 16px;
+      }
+      #sgflnpractice2026_root .sgflnpractice2026_btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* ==========================================================================
+       A4 PORTRAIT PRINT & PDF RULES
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 12mm 12mm 14mm 12mm;
+    }
+
+    .sgflnpractice2026_print_watermark_fixed {
+      display: none;
+    }
+
+    @media print {
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+      }
+
+      .sgflnpractice2026_hide_in_print {
+        display: none !important;
+      }
+
+      #sgflnpractice2026_root {
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 10.5pt !important;
+        line-height: 1.4 !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_banner,
+      #sgflnpractice2026_root .sgflnpractice2026_panel,
+      #sgflnpractice2026_root .sgflnpractice2026_no_print {
+        display: none !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_sheet {
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        overflow: visible !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_sheet:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_ak_sheet {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_repeat_head {
+        display: flex !important;
+        justify-content: space-between !important;
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+        color: #333333 !important;
+        border-bottom: 1px solid #666666 !important;
+        padding-bottom: 3px !important;
+        margin-bottom: 8px !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_ws_brand { font-size: 11pt !important; }
+      #sgflnpractice2026_root .sgflnpractice2026_ws_title { font-size: 13pt !important; }
+
+      #sgflnpractice2026_root .sgflnpractice2026_ws_meta,
+      #sgflnpractice2026_root .sgflnpractice2026_ws_lo_strip,
+      #sgflnpractice2026_root .sgflnpractice2026_act_head,
+      #sgflnpractice2026_root .sgflnpractice2026_act_lang,
+      #sgflnpractice2026_root .sgflnpractice2026_act_body,
+      #sgflnpractice2026_root .sgflnpractice2026_table,
+      #sgflnpractice2026_root .sgflnpractice2026_word_bank,
+      #sgflnpractice2026_root .sgflnpractice2026_obs_title {
+        font-size: 10.5pt !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_ws_footer {
+        font-size: 8.5pt !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_line {
+        height: 22px !important;
+      }
+
+      #sgflnpractice2026_root .sgflnpractice2026_watermark {
+        display: none !important;
+      }
+
+      .sgflnpractice2026_print_watermark_fixed {
+        display: block !important;
+        position: fixed !important;
+        bottom: 4mm !important;
+        right: 6mm !important;
+        font-family: Arial, sans-serif !important;
+        font-size: 8pt !important;
+        font-weight: 700 !important;
+        color: rgba(0, 0, 0, 0.28) !important;
+        letter-spacing: 1px !important;
+        z-index: 9999 !important;
+        pointer-events: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="sgflnpractice2026_root">
+  <!-- Fixed Print Watermark (Appears on Every Printed Page) -->
+  <div class="sgflnpractice2026_print_watermark_fixed">SMARTGURUJI – smartguruji.in</div>
+
+  <!-- On-Screen Header Banner -->
+  <div class="sgflnpractice2026_banner sgflnpractice2026_no_print">
+    <span class="sgflnpractice2026_brand_tag">SMARTGURUJI – smartguruji.in</span>
+    <h1>SMARTGURUJI – ENGLISH FLN LO-BASED WORK SHEET GENERATOR | CLASSES 4 TO 10</h1>
+    <p>Printable, student-friendly Foundational Literacy classroom work sheets for Karnataka Government &amp; Aided Schools.</p>
+  </div>
+
+  <!-- Teacher Input Dashboard -->
+  <div class="sgflnpractice2026_panel sgflnpractice2026_no_print">
+    <h2 class="sgflnpractice2026_panel_title">Teacher Work Sheet Setup</h2>
+    <form id="sgflnpractice2026_form" novalidate>
+      <div class="sgflnpractice2026_grid">
+
+        <div class="sgflnpractice2026_field sgflnpractice2026_field_wide">
+          <label for="sgflnpractice2026_school">School Name</label>
+          <input type="text" id="sgflnpractice2026_school" placeholder="e.g., GHPS / GHS Vidyanagar" maxlength="100">
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_district">District (Karnataka)</label>
+          <select id="sgflnpractice2026_district">
+            <option value="">-- Select District --</option>
+            <option value="Bagalkote">Bagalkote</option>
+            <option value="Ballari">Ballari</option>
+            <option value="Belagavi">Belagavi</option>
+            <option value="Bengaluru Rural">Bengaluru Rural</option>
+            <option value="Bengaluru Urban">Bengaluru Urban</option>
+            <option value="Bidar">Bidar</option>
+            <option value="Chamarajanagara">Chamarajanagara</option>
+            <option value="Chikkaballapura">Chikkaballapura</option>
+            <option value="Chikkamagaluru">Chikkamagaluru</option>
+            <option value="Chitradurga">Chitradurga</option>
+            <option value="Dakshina Kannada">Dakshina Kannada</option>
+            <option value="Davanagere">Davanagere</option>
+            <option value="Dharwad">Dharwad</option>
+            <option value="Gadag">Gadag</option>
+            <option value="Hassan">Hassan</option>
+            <option value="Haveri">Haveri</option>
+            <option value="Kalaburagi">Kalaburagi</option>
+            <option value="Kodagu">Kodagu</option>
+            <option value="Kolar">Kolar</option>
+            <option value="Koppal">Koppal</option>
+            <option value="Mandya">Mandya</option>
+            <option value="Mysuru">Mysuru</option>
+            <option value="Raichur">Raichur</option>
+            <option value="Ramanagara">Ramanagara</option>
+            <option value="Shivamogga">Shivamogga</option>
+            <option value="Tumakuru">Tumakuru</option>
+            <option value="Udupi">Udupi</option>
+            <option value="Uttara Kannada">Uttara Kannada</option>
+            <option value="Vijayanagara">Vijayanagara</option>
+            <option value="Vijayapura">Vijayapura</option>
+            <option value="Yadgir">Yadgir</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_teacher">Teacher Name</label>
+          <input type="text" id="sgflnpractice2026_teacher" placeholder="e.g., Ramesh Kumar" maxlength="80">
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_student">Student Name (Optional)</label>
+          <input type="text" id="sgflnpractice2026_student" placeholder="Leave blank for print line" maxlength="80">
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_class">Class</label>
+          <select id="sgflnpractice2026_class">
+            <option value="4">Class 4</option>
+            <option value="5">Class 5</option>
+            <option value="6" selected>Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_subject">Subject</label>
+          <input type="text" id="sgflnpractice2026_subject" value="English" readonly>
+        </div>
+
+        <div class="sgflnpractice2026_field sgflnpractice2026_field_wide">
+          <label for="sgflnpractice2026_lo">Learning Outcome (LO)</label>
+          <select id="sgflnpractice2026_lo">
+            <option value="LO-1">LO-1: Read simple sentences and a short paragraph with understanding.</option>
+            <option value="LO-2">LO-2: Answer simple questions based on the text (Who, What, Where, Why).</option>
+            <option value="LO-3">LO-3: Write simple sentences independently (3–5 sentences).</option>
+            <option value="LO-4">LO-4: Use English for everyday communication (introductions, needs, basic expressions).</option>
+          </select>
+        </div>
+
+        <!-- Conditional LO-1 Stage Selector -->
+        <div class="sgflnpractice2026_field" id="sgflnpractice2026_stage_wrap">
+          <label for="sgflnpractice2026_stage">LO-1 Stage</label>
+          <select id="sgflnpractice2026_stage">
+            <option value="letter">Letter Stage – Alphabet, vowels and consonants</option>
+            <option value="word">Word Stage – 2-letter, 3-letter, 4-letter and 5-letter words</option>
+            <option value="sentence">Sentence Stage – Reading and understanding 3 to 5 simple sentences</option>
+            <option value="paragraph">Short Paragraph Stage – Reading and understanding short paragraphs (3–5 sentences)</option>
+          </select>
+        </div>
+
+        <!-- Conditional Activity Options for LO-2, LO-3, LO-4 -->
+        <div class="sgflnpractice2026_field sgflnpractice2026_hidden" id="sgflnpractice2026_focus_wrap">
+          <label for="sgflnpractice2026_focus" id="sgflnpractice2026_focus_label">Activity Focus</label>
+          <select id="sgflnpractice2026_focus"></select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_difficulty">Practice Difficulty</label>
+          <select id="sgflnpractice2026_difficulty">
+            <option value="Beginner">Beginner</option>
+            <option value="Developing" selected>Developing</option>
+            <option value="Independent">Independent</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_duration">Practice Duration</label>
+          <select id="sgflnpractice2026_duration">
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="30" selected>30 minutes</option>
+            <option value="40">40 minutes</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_count">Number of WORK SHEETs</label>
+          <input type="number" id="sgflnpractice2026_count" min="1" max="5" value="1">
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_lang">Language Support</label>
+          <select id="sgflnpractice2026_lang">
+            <option value="en">English only</option>
+            <option value="kn">English with simple Kannada instructions</option>
+            <option value="mr">English with simple Marathi instructions</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field">
+          <label for="sgflnpractice2026_ak">Include Answer Key</label>
+          <select id="sgflnpractice2026_ak">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="sgflnpractice2026_field sgflnpractice2026_field_full">
+          <div id="sgflnpractice2026_lo_desc" class="sgflnpractice2026_lo_box"></div>
+        </div>
+      </div>
+
+      <div id="sgflnpractice2026_error" class="sgflnpractice2026_alert sgflnpractice2026_hidden"></div>
+
+      <div class="sgflnpractice2026_actions">
+        <button type="button" id="sgflnpractice2026_btn_gen" class="sgflnpractice2026_btn sgflnpractice2026_btn_primary">Generate WORK SHEET</button>
+        <button type="button" id="sgflnpractice2026_btn_regen" class="sgflnpractice2026_btn sgflnpractice2026_btn_secondary">Generate Another WORK SHEET</button>
+        <button type="button" id="sgflnpractice2026_btn_print" class="sgflnpractice2026_btn sgflnpractice2026_btn_success">Print WORK SHEET</button>
+        <button type="button" id="sgflnpractice2026_btn_pdf" class="sgflnpractice2026_btn sgflnpractice2026_btn_pdf">Save as PDF</button>
+        <button type="button" id="sgflnpractice2026_btn_toggle_ak" class="sgflnpractice2026_btn sgflnpractice2026_btn_toggle">Hide Answer Key</button>
+        <button type="button" id="sgflnpractice2026_btn_reset" class="sgflnpractice2026_btn sgflnpractice2026_btn_reset">Reset Form</button>
+      </div>
+
+      <div id="sgflnpractice2026_status" class="sgflnpractice2026_status_bar sgflnpractice2026_hidden"></div>
+    </form>
+  </div>
+
+  <!-- Printable Worksheets Output -->
+  <div id="sgflnpractice2026_print_area"></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var sgflnpractice2026_NS = "sgflnpractice2026_";
+
+  /* ==========================================================================
+     1. EXACT LEARNING OUTCOMES & MULTILINGUAL INSTRUCTIONS
+     ========================================================================== */
+  var sgflnpractice2026_LO_TEXT = {
+    "LO-1": "LO-1: Read simple sentences and a short paragraph with understanding.",
+    "LO-2": "LO-2: Answer simple questions based on the text (Who, What, Where, Why).",
+    "LO-3": "LO-3: Write simple sentences independently (3–5 sentences).",
+    "LO-4": "LO-4: Use English for everyday communication (introductions, needs, basic expressions)."
+  };
+
+  var sgflnpractice2026_STAGE_LABELS = {
+    letter: "Letter Stage – Alphabet, vowels and consonants",
+    word: "Word Stage – 2-letter, 3-letter, 4-letter and 5-letter words",
+    sentence: "Sentence Stage – Reading and understanding 3 to 5 simple sentences",
+    paragraph: "Short Paragraph Stage – Reading and understanding short paragraphs of 3 to 5 sentences"
+  };
+
+  var sgflnpractice2026_FOCUS_OPTIONS = {
+    "LO-2": [
+      { value: "mixed", label: "All Comprehension Activities (Who, What, Where, Why)" },
+      { value: "school", label: "School & Classroom Passages" },
+      { value: "everyday", label: "Everyday Life & Community Passages" }
+    ],
+    "LO-3": [
+      { value: "mixed", label: "All Independent Writing Activities" },
+      { value: "personal", label: "Myself, Family, School & Daily Routine" },
+      { value: "descriptive", label: "Objects, Scenes, Festivals & Events" }
+    ],
+    "LO-4": [
+      { value: "mixed", label: "All Everyday Communication Activities" },
+      { value: "classroom", label: "School & Classroom Communication" },
+      { value: "social", label: "Greetings, Requests & Everyday Situations" }
+    ]
+  };
+
+  var sgflnpractice2026_LANG_HINTS = {
+    identify_cap: {
+      kn: "ದೊಡ್ಡ ಅಕ್ಷರಗಳನ್ನು (Capital letters) ಗುರುತಿಸಿ ವೃತ್ತ ಮಾಡಿ.",
+      mr: "मोठी अक्षरे (Capital letters) ओळखा आणि त्यांभोवती वर्तुळ करा."
+    },
+    identify_small: {
+      kn: "ಸಣ್ಣ ಅಕ್ಷರಗಳನ್ನು (Small letters) ಗುರುತಿಸಿ ಕೆಳಗೆ ಗೆರೆ ಎಳೆಯಿರಿ.",
+      mr: "लहान अक्षरे (Small letters) ओळखा आणि त्यांखाली रेघ ओढा."
+    },
+    match_case: {
+      kn: "ದೊಡ್ಡ ಅಕ್ಷರಗಳನ್ನು ಅವುಗಳ ಸರಿಯಾದ ಸಣ್ಣ ಅಕ್ಷರಗಳೊಂದಿಗೆ ಹೊಂದಿಸಿ.",
+      mr: "मोठी अक्षरे त्यांच्या योग्य लहान अक्षरांशी जोडा."
+    },
+    missing_alpha: {
+      kn: "ಅಕ್ಷರಮಾಲೆಯ ಕ್ರಮದಲ್ಲಿ ಬಿಟ್ಟ ಅಕ್ಷರಗಳನ್ನು ಬರೆಯಿರಿ.",
+      mr: "वर्णमालेच्या क्रमाने गाळलेली अक्षरे लिहा."
+    },
+    jumbled_alpha: {
+      kn: "ಅಕ್ಷರಗಳನ್ನು ಸರಿಯಾದ ಅಕ್ಷರಮಾಲೆಯ ಕ್ರಮದಲ್ಲಿ (A–Z) ಜೋಡಿಸಿ ಬರೆಯಿರಿ.",
+      mr: "अक्षरे योग्य वर्णमालेच्या क्रमाने (A–Z) लावून लिहा."
+    },
+    circle_vowels: {
+      kn: "ಸ್ವರಗಳನ್ನು (A, E, I, O, U) ವೃತ್ತ ಮಾಡಿ.",
+      mr: "स्वरांभोवती (A, E, I, O, U) वर्तुळ करा."
+    },
+    identify_cons: {
+      kn: "ವ್ಯಂಜನಗಳನ್ನು (Consonants) ಗುರುತಿಸಿ ಬರೆಯಿರಿ.",
+      mr: "व्यंजने (Consonants) ओळखून लिहा."
+    },
+    missing_vowel_word: {
+      kn: "ಸರಿಯಾದ ಸ್ವರವನ್ನು (a, e, i, o, u) ಬಳಸಿ ಪದಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.",
+      mr: "योग्य स्वर (a, e, i, o, u) वापरून शब्द पूर्ण करा."
+    },
+    match_letter_word: {
+      kn: "ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ಅದರ ಸರಿಯಾದ ಪದದೊಂದಿಗೆ ಹೊಂದಿಸಿ.",
+      mr: "प्रत्येक अक्षर त्याच्या योग्य शब्दाशी जोडा."
+    },
+    first_letter: {
+      kn: "ಪ್ರತಿ ಪದದ ಮೊದಲ ಮತ್ತು ಕೊನೆಯ ಅಕ್ಷರವನ್ನು ಬರೆಯಿರಿ.",
+      mr: "प्रत्येक शब्दाचे पहिले आणि शेवटचे अक्षर लिहा."
+    },
+    sort_vc: {
+      kn: "ಕೊಟ್ಟಿರುವ ಅಕ್ಷರಗಳನ್ನು ಸ್ವರಗಳು (Vowels) ಮತ್ತು ವ್ಯಂಜನಗಳು (Consonants) ಎಂದು ವಿಂಗಡಿಸಿ.",
+      mr: "दिलेली अक्षरे स्वर (Vowels) आणि व्यंजने (Consonants) यात वर्गीकृत करा."
+    },
+    before_after: {
+      kn: "ಕೊಟ್ಟಿರುವ ಅಕ್ಷರದ ಹಿಂದಿನ ಮತ್ತು ಮುಂದಿನ ಅಕ್ಷರವನ್ನು ಬರೆಯಿರಿ.",
+      mr: "दिलेल्या अक्षराच्या आधीचे आणि नंतरचे अक्षर लिहा."
+    },
+    write_alpha: {
+      kn: "ಸೂಚಿಸಿದ ಅಕ್ಷರವನ್ನು ವೃತ್ತ ಮಾಡಿ ಮತ್ತು ಅಕ್ಷರಮಾಲೆಯನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಬರೆಯಿರಿ.",
+      mr: "सांगितलेले अक्षर गोल करा आणि इंग्रजी वर्णमाला स्वतः लिहा."
+    },
+    missing_letters_word: {
+      kn: "ಬಿಟ್ಟಿರುವ ಅಕ್ಷರವನ್ನು ಬರೆದು ಪದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.",
+      mr: "गाळलेले अक्षर लिहून शब्द पूर्ण करा."
+    },
+    jumbled_word: {
+      kn: "ಅಕ್ಷರಗಳನ್ನು ಸರಿಯಾಗಿ ಜೋಡಿಸಿ ಅರ್ಥಪೂರ್ಣ ಪದ ಬರೆಯಿರಿ.",
+      mr: "अक्षरे योग्य क्रमाने लावून अर्थपूर्ण शब्द तयार करा."
+    },
+    correct_spelling: {
+      kn: "ಸರಿಯಾದ ಕಾಗುಣಿತವಿರುವ (spelling) ಪದವನ್ನು ವೃತ್ತ ಮಾಡಿ.",
+      mr: "योग्य शुद्धलेखन असलेला शब्द गोल करा."
+    },
+    group_first_letter: {
+      kn: "ಪದಗಳನ್ನು ಅವುಗಳ ಮೊದಲ ಅಕ್ಷರದ ಪ್ರಕಾರ ಗುಂಪು ಮಾಡಿ.",
+      mr: "शब्दांचे त्यांच्या पहिल्या अक्षरानुसार गट करा."
+    },
+    match_meaning: {
+      kn: "ಪದಗಳನ್ನು ಅವುಗಳ ಸರಿಯಾದ ಅರ್ಥದೊಂದಿಗೆ ಹೊಂದಿಸಿ.",
+      mr: "शब्द त्यांच्या योग्य अर्थाशी जोडा."
+    },
+    odd_word: {
+      kn: "ಗುಂಪಿಗೆ ಸೇರದ ಪದವನ್ನು (Odd word) ಗುರುತಿಸಿ ವೃತ್ತ ಮಾಡಿ.",
+      mr: "गटात न बसणारा शब्द (Odd word) ओळखून गोल करा."
+    },
+    group_category: {
+      kn: "ಪದಗಳನ್ನು ಸರಿಯಾದ ವಿಭಾಗದಲ್ಲಿ (Category) ಬರೆಯಿರಿ.",
+      mr: "शब्द योग्य गटात (Category) लिहा."
+    },
+    use_in_sentence: {
+      kn: "ಕೊಟ್ಟಿರುವ ಪದಗಳನ್ನು ಬಳಸಿ ಸರಳ ವಾಕ್ಯಗಳನ್ನು ಬರೆಯಿರಿ.",
+      mr: "दिलेले शब्द वापरून सोपी वाक्ये लिहा."
+    },
+    read_aloud: {
+      kn: "ವಾಕ್ಯಗಳನ್ನು / ಪ್ಯಾರಾಗ್ರಾಫ್ ಅನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಗಟ್ಟಿಯಾಗಿ ಓದಿ.",
+      mr: "वाक्ये / उतारा स्पष्टपणे मोठ्याने वाचा."
+    },
+    jumbled_sentence: {
+      kn: "ಪದಗಳನ್ನು ಸರಿಯಾದ ಕ್ರಮದಲ್ಲಿ ಜೋಡಿಸಿ ಅರ್ಥಪೂರ್ಣ ವಾಕ್ಯ ಬರೆಯಿರಿ.",
+      mr: "शब्द योग्य क्रमाने लावून अर्थपूर्ण वाक्य तयार करा."
+    },
+    fill_blank: {
+      kn: "ಸರಿಯಾದ ಪದವನ್ನು ಬಳಸಿ ಖಾಲಿ ಜಾಗಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.",
+      mr: "योग्य शब्द वापरून रिकाम्या जागा भरा."
+    },
+    choose_correct: {
+      kn: "ಸರಿಯಾದ ಉತ್ತರವನ್ನು ಆರಿಸಿ ಗುರುತಿಸಿ.",
+      mr: "योग्य उत्तर निवडा आणि खूण करा."
+    },
+    find_action: {
+      kn: "ಪ್ರತಿ ವಾಕ್ಯದಲ್ಲಿರುವ ಕ್ರಿಯಾಪದವನ್ನು (Action word) ಬರೆಯಿರಿ.",
+      mr: "प्रत्येक वाक्यातील कृतीदर्शक शब्द (Action word) लिहा."
+    },
+    match_qa: {
+      kn: "ಪ್ರಶ್ನೆಗಳನ್ನು ಅವುಗಳ ಸರಿಯಾದ ಉತ್ತರಗಳೊಂದಿಗೆ ಹೊಂದಿಸಿ.",
+      mr: "प्रश्नांच्या योग्य उत्तरांशी जोड्या लावा."
+    },
+    who_what: {
+      kn: "ವಾಕ್ಯವನ್ನು ಓದಿ ಯಾರು (Who) ಮತ್ತು ಏನು (What) ನಡೆಯುತ್ತಿದೆ ಎಂದು ಬರೆಯಿರಿ.",
+      mr: "वाक्य वाचा आणि कोण (Who) व काय (What) घडत आहे ते लिहा."
+    },
+    order_events: {
+      kn: "ಘಟನೆಗಳನ್ನು / ವಾಕ್ಯಗಳನ್ನು ಸರಿಯಾದ ಕ್ರಮದಲ್ಲಿ (1, 2, 3, 4) ಬರೆಯಿರಿ.",
+      mr: "घटना / वाक्ये योग्य क्रमाने (1, 2, 3, 4) लावा."
+    },
+    fix_error: {
+      kn: "ವಾಕ್ಯದಲ್ಲಿರುವ ಸಣ್ಣ ತಪ್ಪನ್ನು ಸರಿಪಡಿಸಿ ಮತ್ತೆ ಬರೆಯಿರಿ.",
+      mr: "वाक्यातील छोटी चूक सुधारून पुन्हा लिहा."
+    },
+    title_main: {
+      kn: "ಸೂಕ್ತವಾದ ಶೀರ್ಷಿಕೆ (Title) ಅಥವಾ ಮುಖ್ಯ ಭಾವನೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ / ಬರೆಯಿರಿ.",
+      mr: "योग्य शीर्षक (Title) किंवा मुख्य कल्पना निवडा / लिहा."
+    },
+    true_false: {
+      kn: "ಕೆಳಗಿನ ಹೇಳಿಕೆಗಳು ಸರಿ (True) ಅಥವಾ ತಪ್ಪು (False) ಎಂದು ಬರೆಯಿರಿ.",
+      mr: "खालील विधाने चूक (False) की बरोबर (True) ते लिहा."
+    },
+    answer_wh: {
+      kn: "ಪಠ್ಯವನ್ನು ಓದಿ ಪ್ರಶ್ನೆಗಳಿಗೆ ಸರಳ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಉತ್ತರಿಸಿ.",
+      mr: "उतारा वाचा आणि प्रश्नांची सोप्या इंग्रजीत उत्तरे लिहा."
+    },
+    oral_retell: {
+      kn: "ಪಠ್ಯವನ್ನು ನಿಮ್ಮ ಸ್ವಂತ ಸರಳ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಮೌಖಿಕವಾಗಿ ಹೇಳಿ.",
+      mr: "उतारा तुमच्या स्वतःच्या सोप्या इंग्रजीत तोंडी सांगा."
+    },
+    write_ind: {
+      kn: "ಕೊಟ್ಟಿರುವ ವಿಷಯದ ಬಗ್ಗೆ 3 ರಿಂದ 5 ಸರಳ ಇಂಗ್ಲಿಷ್ ವಾಕ್ಯಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಬರೆಯಿರಿ.",
+      mr: "दिलेल्या विषयावर 3 ते 5 सोपी इंग्रजी वाक्ये स्वतः लिहा."
+    },
+    complete_starter: {
+      kn: "ವಾಕ್ಯದ ಆರಂಭವನ್ನು ಬಳಸಿ ನಿಮ್ಮ ಸ್ವಂತ ಪದಗಳಿಂದ ಪೂರ್ಣಗೊಳಿಸಿ.",
+      mr: "वाक्याची सुरुवात वापरून स्वतःच्या शब्दांत वाक्य पूर्ण करा."
+    },
+    dialogue_fill: {
+      kn: "ಸಂಭಾಷಣೆಯಲ್ಲಿ ಬಿಟ್ಟಿರುವ ಭಾಗವನ್ನು ಸೂಕ್ತ ಇಂಗ್ಲಿಷ್ ಪದಗಳಿಂದ ಪೂರ್ಣಗೊಳಿಸಿ.",
+      mr: "संवादातील रिकाम्या जागा योग्य इंग्रजी शब्दांनी पूर्ण करा."
+    },
+    match_expr: {
+      kn: "ದೈನಂದಿನ ಇಂಗ್ಲಿಷ್ ಮಾತುಗಳನ್ನು ಅವುಗಳ ಸರಿಯಾದ ಪ್ರತಿಕ್ರಿಯೆಯೊಂದಿಗೆ ಹೊಂದಿಸಿ.",
+      mr: "दैनंदिन इंग्रजी संभाषण त्याच्या योग्य प्रतिसादाशी जोडा."
+    },
+    roleplay: {
+      kn: "ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಅಥವಾ ಶಿಕ್ಷಕರೊಂದಿಗೆ ಈ ಸಂಭಾಷಣೆಯನ್ನು ಅಭ್ಯಾಸ ಮಾಡಿ.",
+      mr: "तुमच्या मित्रासोबत किंवा शिक्षकांसोबत या संवादाचा सराव करा."
+    },
+    respond_sit: {
+      kn: "ಪ್ರತಿ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಏನು ಹೇಳುವಿರಿ ಎಂದು ಬರೆಯಿರಿ.",
+      mr: "प्रत्येक प्रसंगी तुम्ही इंग्रजीत काय म्हणाल ते लिहा."
+    }
+  };
+
+  /* ==========================================================================
+     2. SAFE UTILITIES & CLEAN B&W SVG ICONS
+     ========================================================================== */
+  function esc(str) {
+    return String(str == null ? "" : str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i];
+      a[i] = a[j];
+      a[j] = t;
+    }
+    return a;
+  }
+
+  function pick(arr, n) {
+    return shuffle(arr).slice(0, Math.min(n, arr.length));
+  }
+
+  function todayFormatted() {
+    var d = new Date();
+    return String(d.getDate()).padStart(2, "0") + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + d.getFullYear();
+  }
+
+  function langLine(key, lang) {
+    if (lang === "en" || !sgflnpractice2026_LANG_HINTS[key] || !sgflnpractice2026_LANG_HINTS[key][lang]) return "";
+    return '<span class="' + sgflnpractice2026_NS + 'act_lang">(' + esc(sgflnpractice2026_LANG_HINTS[key][lang]) + ")</span>";
+  }
+
+  function writingLines(n) {
+    var s = "";
+    for (var i = 0; i < n; i++) s += '<div class="' + sgflnpractice2026_NS + 'line"></div>';
+    return s;
+  }
+
+  function isSenior(cls) {
+    return parseInt(cls, 10) >= 7;
+  }
+
+  function miniSvg(type) {
+    var map = {
+      book: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><path d="M4 5h6a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h7z"/></svg>',
+      clock: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+      tree: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 21h6"/></svg>',
+      house: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>',
+      sun: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M5 19l2-2"/></svg>',
+      bus: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><rect x="3" y="5" width="18" height="11" rx="2"/><path d="M3 11h18"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
+      pen: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.8"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg>',
+      scene: '<svg width="100%" height="106" viewBox="0 0 360 106" fill="none" stroke="#000" stroke-width="1.5"><rect x="1" y="1" width="358" height="104" stroke="#444"/><line x1="0" y1="86" x2="360" y2="86"/><rect x="30" y="36" width="95" height="50"/><polygon points="22,36 77,12 133,36"/><rect x="65" y="60" width="24" height="26"/><rect x="42" y="46" width="14" height="14"/><rect x="98" y="46" width="14" height="14"/><line x1="165" y1="86" x2="165" y2="23"/><polygon points="165,23 195,31 165,39"/><circle cx="245" cy="50" r="18"/><line x1="245" y1="68" x2="245" y2="86"/><circle cx="315" cy="24" r="12"/><text x="48" y="31" font-size="10" fill="#000" stroke="none">SCHOOL</text></svg>'
+    };
+    return map[type] || "";
+  }
+
+  /* ==========================================================================
+     3. VERIFIED WORD BANKS (EXACT LETTER LENGTHS) & PASSAGE BANK
+     ========================================================================== */
+  var W2 = [
+    { w: "am", m: "used with I (I am ready)" },
+    { w: "an", m: "used before a vowel sound (an apple)" },
+    { w: "at", m: "shows place or time (at school)" },
+    { w: "by", m: "near or beside (by the window)" },
+    { w: "do", m: "to perform an action (do your work)" },
+    { w: "go", m: "to move to a place" },
+    { w: "he", m: "used for a boy or man" },
+    { w: "in", m: "inside something (in the bag)" },
+    { w: "is", m: "used with he, she, it" },
+    { w: "it", m: "used for a thing or animal" },
+    { w: "me", m: "refers to oneself" },
+    { w: "my", m: "belongs to me (my notebook)" },
+    { w: "no", m: "opposite of yes" },
+    { w: "on", m: "resting on top of (on the desk)" },
+    { w: "to", m: "shows direction (walk to school)" },
+    { w: "up", m: "towards a higher place" },
+    { w: "us", m: "refers to our group" },
+    { w: "we", m: "you and I together" }
+  ];
+
+  var W3 = [
+    { w: "bag", m: "used to carry books", wrong: ["bga", "beg"] },
+    { w: "bus", m: "a large road vehicle", wrong: ["bsu", "bas"] },
+    { w: "cap", m: "worn on the head", wrong: ["cpa", "cep"] },
+    { w: "cup", m: "used to drink tea or milk", wrong: ["cpu", "cop"] },
+    { w: "day", m: "time when the sun shines", wrong: ["dya", "dey"] },
+    { w: "fan", m: "gives cool air in a room", wrong: ["fna", "fen"] },
+    { w: "hat", m: "a head covering with a brim", wrong: ["hta", "het"] },
+    { w: "hut", m: "a small simple house", wrong: ["htu", "hot"] },
+    { w: "jug", m: "a container for water", wrong: ["jgu", "jog"] },
+    { w: "key", m: "opens a lock", wrong: ["kye", "kay"] },
+    { w: "map", m: "a drawing of places and roads", wrong: ["mpa", "mep"] },
+    { w: "mat", m: "spread on the floor to sit", wrong: ["mta", "met"] },
+    { w: "net", m: "used in games or fishing", wrong: ["nte", "nat"] },
+    { w: "pan", m: "used for cooking food", wrong: ["pna", "pon"] },
+    { w: "pen", m: "used for writing with ink", wrong: ["pne", "pan"] },
+    { w: "pin", m: "a small metal fastener", wrong: ["pni", "pen"] },
+    { w: "pot", m: "a round vessel for water or food", wrong: ["pto", "pat"] },
+    { w: "sun", m: "gives us light and heat", wrong: ["snu", "son"] },
+    { w: "tap", m: "controls water flow", wrong: ["tpa", "tep"] },
+    { w: "ten", m: "the number after nine", wrong: ["tne", "tan"] },
+    { w: "van", m: "a vehicle for goods or people", wrong: ["vna", "ven"] }
+  ];
+
+  var W4 = [
+    { w: "bank", m: "a place where money is kept safely" },
+    { w: "bell", m: "rings to show class time" },
+    { w: "bird", m: "an animal with wings and feathers" },
+    { w: "boat", m: "travels on water" },
+    { w: "book", m: "pages bound together for reading" },
+    { w: "city", m: "a large town with many people" },
+    { w: "crop", m: "plants grown on a farm for food" },
+    { w: "desk", m: "a table used for studying" },
+    { w: "door", m: "used to enter or leave a room" },
+    { w: "farm", m: "land used for growing crops" },
+    { w: "fish", m: "an animal that lives in water" },
+    { w: "flag", m: "a symbol of a country or school" },
+    { w: "gate", m: "an entrance to a compound" },
+    { w: "hand", m: "part of the body used to hold things" },
+    { w: "hill", m: "a raised area of land" },
+    { w: "home", m: "the place where a family lives" },
+    { w: "lake", m: "a large body of fresh water" },
+    { w: "lamp", m: "gives light in the dark" },
+    { w: "leaf", m: "the green flat part of a plant" },
+    { w: "milk", m: "a white nutritious drink" },
+    { w: "moon", m: "shines in the night sky" },
+    { w: "nest", m: "a home built by a bird" },
+    { w: "park", m: "a public garden for walking and play" },
+    { w: "rain", m: "water falling from clouds" },
+    { w: "rice", m: "a common food grain" },
+    { w: "road", m: "a wide path for vehicles" },
+    { w: "room", m: "a walled space inside a building" },
+    { w: "seed", m: "grows into a new plant" },
+    { w: "star", m: "a bright point of light in the night sky" },
+    { w: "time", m: "measured in hours and minutes" },
+    { w: "town", m: "larger than a village, smaller than a city" },
+    { w: "tree", m: "a tall plant with a trunk and branches" },
+    { w: "wind", m: "moving air" }
+  ];
+
+  var W5 = [
+    { w: "apple", m: "a crisp red or green fruit", wrong: ["aple", "appel"] },
+    { w: "bench", m: "a long seat in a classroom or park", wrong: ["bnch", "benche"] },
+    { w: "board", m: "a flat surface for writing in class", wrong: ["boadr", "bord"] },
+    { w: "bread", m: "baked food made from flour", wrong: ["bred", "braed"] },
+    { w: "chair", m: "a seat with a back for one person", wrong: ["chiar", "chare"] },
+    { w: "chalk", m: "used for writing on a blackboard", wrong: ["cholk", "chak"] },
+    { w: "class", m: "a group of students learning together", wrong: ["clas", "clss"] },
+    { w: "clean", m: "free from dirt", wrong: ["cleen", "claen"] },
+    { w: "clock", m: "an instrument that shows time", wrong: ["clok", "clack"] },
+    { w: "cloud", m: "white or grey mass in the sky", wrong: ["clowd", "clod"] },
+    { w: "earth", m: "the planet we live on", wrong: ["erth", "aerth"] },
+    { w: "field", m: "open land for crops or sports", wrong: ["feild", "fild"] },
+    { w: "fruit", m: "sweet food that grows on trees", wrong: ["friut", "frut"] },
+    { w: "glass", m: "a container for drinking water", wrong: ["glas", "glss"] },
+    { w: "grass", m: "short green plants covering ground", wrong: ["gras", "gress"] },
+    { w: "green", m: "the colour of fresh leaves", wrong: ["grean", "gren"] },
+    { w: "house", m: "a building where people live", wrong: ["hous", "howse"] },
+    { w: "light", m: "brightness that helps us see", wrong: ["lite", "ligth"] },
+    { w: "lunch", m: "a meal eaten in the afternoon", wrong: ["lanch", "luch"] },
+    { w: "mango", m: "a sweet yellow summer fruit", wrong: ["mengo", "magno"] },
+    { w: "paper", m: "thin sheet used for writing", wrong: ["papar", "paer"] },
+    { w: "plant", m: "a living thing with roots and leaves", wrong: ["plent", "palnt"] },
+    { w: "river", m: "a natural stream of flowing water", wrong: ["rivar", "rivr"] },
+    { w: "scale", m: "a ruler used to measure length", wrong: ["scael", "skale"] },
+    { w: "shirt", m: "a garment worn on the upper body", wrong: ["shrit", "shert"] },
+    { w: "stone", m: "a small hard piece of rock", wrong: ["stoen", "ston"] },
+    { w: "story", m: "an account of real or imagined events", wrong: ["stori", "stroy"] },
+    { w: "table", m: "furniture with a flat top and legs", wrong: ["tabel", "tabal"] },
+    { w: "train", m: "a railway vehicle with coaches", wrong: ["trian", "tran"] },
+    { w: "water", m: "a clear liquid needed by all life", wrong: ["watar", "watr"] },
+    { w: "wheel", m: "a round part that helps vehicles move", wrong: ["weel", "wheal"] },
+    { w: "write", m: "to form letters and words on paper", wrong: ["wriet", "writ"] }
+  ];
+
+  var PASSAGES = [
+    {
+      topic: "My School",
+      category: "school",
+      text: "My school is near the main road in our village. It has ten clean classrooms, a library, and a large playground. Our teachers come early and help every student learn with care. During the lunch break, we sit together under the neem tree and share our food. I like my school because it is peaceful and friendly.",
+      titles: ["My School", "A Busy Train Station", "A Day at the Zoo"],
+      correctTitle: "My School",
+      mainIdea: "The student describes their clean, friendly school and daily routine there.",
+      mainIdeaOptions: [
+        "The student describes their clean, friendly school and daily routine there.",
+        "The student talks about buying fruits at a market.",
+        "The student explains how to repair a bicycle."
+      ],
+      vocab: [
+        { word: "peaceful", meaning: "calm and quiet" },
+        { word: "library", meaning: "a room with books for reading" },
+        { word: "share", meaning: "to divide and give to others" },
+        { word: "village", meaning: "a small rural settlement" }
+      ],
+      specificQ: "Where do the students sit during the lunch break?",
+      specificA: "They sit under the neem tree.",
+      whoQ: "Who comes early and helps every student learn?",
+      whoA: "Our teachers come early and help every student learn.",
+      whatQ: "What rooms and spaces does the school have?",
+      whatA: "It has ten clean classrooms, a library, and a large playground.",
+      whereQ: "Where is the school located?",
+      whereA: "The school is near the main road in the village.",
+      whyQ: "Why does the student like the school?",
+      whyA: "The student likes the school because it is peaceful and friendly.",
+      blanks: [
+        { s: "My school has ten clean ________.", a: "classrooms" },
+        { s: "We sit together under the ________ tree.", a: "neem" },
+        { s: "Our teachers help every student learn with ________.", a: "care" }
+      ],
+      tf: [
+        { s: "The school is near the main road in the village.", a: "True" },
+        { s: "The school has no playground.", a: "False" },
+        { s: "Students sit under the neem tree during lunch break.", a: "True" }
+      ],
+      events: [
+        "Teachers come early to school.",
+        "Teachers help every student learn with care.",
+        "Students sit under the neem tree during the lunch break.",
+        "Students share their food together."
+      ],
+      entities: { people: "teachers, students", places: "school, village, classrooms, library, playground", objects: "neem tree, food, main road" },
+      mcq: { q: "How many classrooms does the school have?", opts: ["Five", "Ten", "Twenty"], a: "Ten" },
+      findWord: { clue: "Find a word from the paragraph that means 'calm and quiet'.", a: "peaceful" },
+      completeSent: { stem: "During the lunch break, the students", a: "sit together under the neem tree and share their food." }
+    },
+    {
+      topic: "A Rainy Day",
+      category: "everyday",
+      text: "Yesterday afternoon, dark grey clouds covered the sky. Cool wind blew across the fields before heavy rain began to fall. Farmers smiled because their dry crops needed water. Children opened their umbrellas and walked carefully home from school. After the rain stopped, the air smelled fresh and the trees looked bright green.",
+      titles: ["A Rainy Day", "My Favourite Sport", "A Trip to the Library"],
+      correctTitle: "A Rainy Day",
+      mainIdea: "Heavy rain fell in the afternoon, helping crops and making the surroundings fresh.",
+      mainIdeaOptions: [
+        "Heavy rain fell in the afternoon, helping crops and making the surroundings fresh.",
+        "Children played cricket in a hot desert.",
+        "Farmers sold vegetables in a town."
+      ],
+      vocab: [
+        { word: "covered", meaning: "spread over the top of" },
+        { word: "crops", meaning: "plants grown on farms for food" },
+        { word: "carefully", meaning: "with attention and safety" },
+        { word: "fresh", meaning: "clean and cool" }
+      ],
+      specificQ: "What colour were the clouds that covered the sky?",
+      specificA: "The clouds were dark grey.",
+      whoQ: "Who smiled when the rain began to fall?",
+      whoA: "Farmers smiled when the rain began to fall.",
+      whatQ: "What did the children open on their way home?",
+      whatA: "The children opened their umbrellas.",
+      whereQ: "Where did the cool wind blow?",
+      whereA: "The cool wind blew across the fields.",
+      whyQ: "Why did the farmers smile?",
+      whyA: "The farmers smiled because their dry crops needed water.",
+      blanks: [
+        { s: "Dark grey ________ covered the sky.", a: "clouds" },
+        { s: "Farmers smiled because their dry ________ needed water.", a: "crops" },
+        { s: "After the rain, the trees looked bright ________.", a: "green" }
+      ],
+      tf: [
+        { s: "The rain fell yesterday morning.", a: "False" },
+        { s: "Farmers were happy because their crops needed water.", a: "True" },
+        { s: "Children walked carefully home with umbrellas.", a: "True" }
+      ],
+      events: [
+        "Dark grey clouds covered the sky.",
+        "Cool wind blew across the fields.",
+        "Heavy rain began to fall.",
+        "After the rain stopped, the air smelled fresh."
+      ],
+      entities: { people: "farmers, children", places: "fields, school, home", objects: "clouds, umbrellas, crops, trees" },
+      mcq: { q: "How did the trees look after the rain stopped?", opts: ["Dry and brown", "Bright green", "Covered in snow"], a: "Bright green" },
+      findWord: { clue: "Find a word from the paragraph that means 'plants grown on a farm'.", a: "crops" },
+      completeSent: { stem: "Children opened their umbrellas and", a: "walked carefully home from school." }
+    },
+    {
+      topic: "A Visit to the Market",
+      category: "everyday",
+      text: "On Sunday morning, Kiran went to the weekly market with his mother. The market was busy with rows of vegetable stalls and fruit baskets. They bought fresh tomatoes, bananas, rice, and jaggery from a local vendor. Kiran carried the cloth bag to help his mother because the bag was heavy. They returned home by ten o'clock to prepare lunch.",
+      titles: ["A Visit to the Market", "Our Science Laboratory", "My Daily Exercise"],
+      correctTitle: "A Visit to the Market",
+      mainIdea: "Kiran and his mother visited the Sunday market to buy groceries and returned home to cook.",
+      mainIdeaOptions: [
+        "Kiran and his mother visited the Sunday market to buy groceries and returned home to cook.",
+        "Kiran went on a train journey to Mysuru.",
+        "Kiran planted ten saplings in his garden."
+      ],
+      vocab: [
+        { word: "weekly", meaning: "happening once every week" },
+        { word: "vendor", meaning: "a person who sells things" },
+        { word: "heavy", meaning: "having great weight" },
+        { word: "prepare", meaning: "to make ready" }
+      ],
+      specificQ: "When did Kiran go to the weekly market?",
+      specificA: "He went on Sunday morning.",
+      whoQ: "Who went to the weekly market with Kiran?",
+      whoA: "Kiran's mother went with him.",
+      whatQ: "What items did they buy from the local vendor?",
+      whatA: "They bought fresh tomatoes, bananas, rice, and jaggery.",
+      whereQ: "Where did they return by ten o'clock?",
+      whereA: "They returned home by ten o'clock.",
+      whyQ: "Why did Kiran carry the cloth bag?",
+      whyA: "He carried the cloth bag to help his mother because it was heavy.",
+      blanks: [
+        { s: "Kiran went to the ________ market on Sunday morning.", a: "weekly" },
+        { s: "They bought fresh tomatoes, bananas, rice, and ________.", a: "jaggery" },
+        { s: "Kiran carried the ________ bag to help his mother.", a: "cloth" }
+      ],
+      tf: [
+        { s: "Kiran went to the market on Friday evening.", a: "False" },
+        { s: "They bought vegetables, fruit, rice, and jaggery.", a: "True" },
+        { s: "They returned home by ten o'clock.", a: "True" }
+      ],
+      events: [
+        "Kiran and his mother went to the Sunday market.",
+        "They saw rows of vegetable stalls and fruit baskets.",
+        "They bought tomatoes, bananas, rice, and jaggery.",
+        "They returned home by ten o'clock to prepare lunch."
+      ],
+      entities: { people: "Kiran, mother, local vendor", places: "weekly market, home", objects: "tomatoes, bananas, rice, jaggery, cloth bag" },
+      mcq: { q: "What kind of bag did Kiran carry?", opts: ["A plastic bag", "A cloth bag", "A paper box"], a: "A cloth bag" },
+      findWord: { clue: "Find a word from the paragraph that means 'a person who sells goods'.", a: "vendor" },
+      completeSent: { stem: "They returned home by ten o'clock to", a: "prepare lunch." }
+    },
+    {
+      topic: "My Classroom",
+      category: "school",
+      text: "Our classroom is bright and airy because it has three wide windows. There is a clean green board on the front wall and neat wooden benches for all students. A world map and a weekly timetable hang near the teacher's table. Every afternoon, two students sweep the floor and keep the dustbin clean. We take pride in keeping our classroom tidy.",
+      titles: ["My Classroom", "A Festival Night", "A Boat Ride"],
+      correctTitle: "My Classroom",
+      mainIdea: "The students keep their bright, well-equipped classroom clean and tidy.",
+      mainIdeaOptions: [
+        "The students keep their bright, well-equipped classroom clean and tidy.",
+        "The students visit a hospital to meet a doctor.",
+        "The students bake a cake at home."
+      ],
+      vocab: [
+        { word: "airy", meaning: "filled with fresh air" },
+        { word: "timetable", meaning: "a chart showing class timings" },
+        { word: "tidy", meaning: "neat and clean" },
+        { word: "pride", meaning: "a good feeling about one's work" }
+      ],
+      specificQ: "What hangs near the teacher's table?",
+      specificA: "A world map and a weekly timetable hang near the teacher's table.",
+      whoQ: "Who sweeps the floor every afternoon?",
+      whoA: "Two students sweep the floor every afternoon.",
+      whatQ: "What is fixed on the front wall of the classroom?",
+      whatA: "A clean green board is on the front wall.",
+      whereQ: "Where do the world map and timetable hang?",
+      whereA: "They hang near the teacher's table.",
+      whyQ: "Why is the classroom bright and airy?",
+      whyA: "It is bright and airy because it has three wide windows.",
+      blanks: [
+        { s: "The classroom has three wide ________.", a: "windows" },
+        { s: "There is a clean ________ board on the front wall.", a: "green" },
+        { s: "Two students sweep the ________ every afternoon.", a: "floor" }
+      ],
+      tf: [
+        { s: "The classroom has three wide windows.", a: "True" },
+        { s: "A world map hangs outside the school gate.", a: "False" },
+        { s: "Students keep the dustbin clean.", a: "True" }
+      ],
+      events: [
+        "Light and air enter through three wide windows.",
+        "Students sit on neat wooden benches facing the green board.",
+        "Every afternoon, two students sweep the floor.",
+        "They keep the dustbin and classroom tidy."
+      ],
+      entities: { people: "students, teacher", places: "classroom", objects: "windows, green board, wooden benches, world map, timetable, dustbin" },
+      mcq: { q: "How many students sweep the floor every afternoon?", opts: ["Two", "Five", "Ten"], a: "Two" },
+      findWord: { clue: "Find a word from the paragraph that means 'neat and clean'.", a: "tidy" },
+      completeSent: { stem: "Every afternoon, two students sweep the floor and", a: "keep the dustbin clean." }
+    },
+    {
+      topic: "A Useful Tree",
+      category: "everyday",
+      text: "A big banyan tree stands beside the bus stop in our town. Its thick green leaves give cool shade to travellers on hot summer afternoons. Many birds build their nests on its strong branches. People sit on the stone platform under the tree to rest and talk. We should protect trees because they give us clean air and shelter.",
+      titles: ["A Useful Tree", "My New Bicycle", "A Football Match"],
+      correctTitle: "A Useful Tree",
+      mainIdea: "A banyan tree near the bus stop gives shade, shelter to birds, and clean air.",
+      mainIdeaOptions: [
+        "A banyan tree near the bus stop gives shade, shelter to birds, and clean air.",
+        "Travellers wait inside a railway office.",
+        "Birds fly away during winter."
+      ],
+      vocab: [
+        { word: "shade", meaning: "a cool area protected from sunlight" },
+        { word: "travellers", meaning: "people going from one place to another" },
+        { word: "protect", meaning: "to keep safe from harm" },
+        { word: "shelter", meaning: "a safe place to stay" }
+      ],
+      specificQ: "Where do people sit to rest and talk?",
+      specificA: "People sit on the stone platform under the tree.",
+      whoQ: "Who gets cool shade on hot summer afternoons?",
+      whoA: "Travellers get cool shade on hot summer afternoons.",
+      whatQ: "What do birds build on the tree's strong branches?",
+      whatA: "Birds build their nests on its strong branches.",
+      whereQ: "Where does the big banyan tree stand?",
+      whereA: "It stands beside the bus stop in the town.",
+      whyQ: "Why should we protect trees?",
+      whyA: "We should protect trees because they give us clean air and shelter.",
+      blanks: [
+        { s: "A big ________ tree stands beside the bus stop.", a: "banyan" },
+        { s: "Many birds build their ________ on its strong branches.", a: "nests" },
+        { s: "Trees give us clean ________ and shelter.", a: "air" }
+      ],
+      tf: [
+        { s: "The banyan tree stands beside the bus stop.", a: "True" },
+        { s: "People sit on a wooden boat under the tree.", a: "False" },
+        { s: "Trees give us clean air and shelter.", a: "True" }
+      ],
+      events: [
+        "A big banyan tree stands beside the bus stop.",
+        "Travellers rest in its cool shade during hot afternoons.",
+        "Birds build nests on its strong branches.",
+        "People sit on the stone platform to rest and talk."
+      ],
+      entities: { people: "travellers, people", places: "bus stop, town", objects: "banyan tree, leaves, nests, stone platform" },
+      mcq: { q: "What kind of tree is described in the paragraph?", opts: ["A coconut tree", "A banyan tree", "A pine tree"], a: "A banyan tree" },
+      findWord: { clue: "Find a word from the paragraph that means 'to keep safe from harm'.", a: "protect" },
+      completeSent: { stem: "Its thick green leaves give cool shade to", a: "travellers on hot summer afternoons." }
+    },
+    {
+      topic: "My Daily Routine",
+      category: "school",
+      text: "Asha wakes up at six o'clock every morning. First, she brushes her teeth, washes her face, and drinks a glass of warm water. Next, she revises her English words for twenty minutes before eating breakfast. She walks to school at half past eight with her neighbours. In the evening, she finishes her homework and helps her parents at home.",
+      titles: ["My Daily Routine", "A Holiday in Goa", "A Pet Dog"],
+      correctTitle: "My Daily Routine",
+      mainIdea: "Asha follows a disciplined daily routine from morning until evening.",
+      mainIdeaOptions: [
+        "Asha follows a disciplined daily routine from morning until evening.",
+        "Asha learns how to swim in a river.",
+        "Asha buys new notebooks at a bookshop."
+      ],
+      vocab: [
+        { word: "routine", meaning: "regular daily habits" },
+        { word: "revises", meaning: "reads again to remember well" },
+        { word: "neighbours", meaning: "people living nearby" },
+        { word: "finishes", meaning: "completes a task" }
+      ],
+      specificQ: "How long does Asha revise her English words?",
+      specificA: "She revises her English words for twenty minutes.",
+      whoQ: "Who walks to school with Asha?",
+      whoA: "Her neighbours walk to school with her.",
+      whatQ: "What does Asha do in the evening?",
+      whatA: "She finishes her homework and helps her parents at home.",
+      whereQ: "Where does Asha walk at half past eight?",
+      whereA: "She walks to school at half past eight.",
+      whyQ: "Why does Asha revise her English words before breakfast?",
+      whyA: "She revises them as part of her regular morning routine to remember them well.",
+      blanks: [
+        { s: "Asha wakes up at ________ o'clock every morning.", a: "six" },
+        { s: "She drinks a glass of warm ________.", a: "water" },
+        { s: "In the evening, she finishes her ________.", a: "homework" }
+      ],
+      tf: [
+        { s: "Asha wakes up at nine o'clock.", a: "False" },
+        { s: "She walks to school with her neighbours.", a: "True" },
+        { s: "She helps her parents at home in the evening.", a: "True" }
+      ],
+      events: [
+        "Asha wakes up at six o'clock.",
+        "She revises her English words for twenty minutes.",
+        "She walks to school at half past eight.",
+        "In the evening, she finishes her homework and helps her parents."
+      ],
+      entities: { people: "Asha, neighbours, parents", places: "school, home", objects: "teeth, glass of water, breakfast, homework" },
+      mcq: { q: "At what time does Asha walk to school?", opts: ["At seven o'clock", "At half past eight", "At ten o'clock"], a: "At half past eight" },
+      findWord: { clue: "Find a word from the paragraph that means 'people living nearby'.", a: "neighbours" },
+      completeSent: { stem: "In the evening, she finishes her homework and", a: "helps her parents at home." }
+    }
+  ];
+
+  /* ==========================================================================
+     4. LO-1 LETTER STAGE (13 DISTINCT ACTIVITIES)
+     ========================================================================== */
+  function buildLO1Letter(cfg) {
+    var NS = sgflnpractice2026_NS;
+    var diff = cfg.difficulty;
+    var senior = isSenior(cfg.cls);
+    var acts = [];
+    var ak = [];
+
+    var alphaU = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    var alphaL = "abcdefghijklmnopqrstuvwxyz".split("");
+    var vowels = ["A", "E", "I", "O", "U"];
+    var cons = alphaU.filter(function (c) { return vowels.indexOf(c) === -1; });
+
+    // 1. Identify Capital Letters
+    var capMix = shuffle(pick(alphaU, 6).concat(pick(alphaL, 6)));
+    acts.push({
+      title: "Identify Capital Letters — Circle all the capital letters below.",
+      langKey: "identify_cap",
+      body: '<div class="' + NS + 'chip_row">' + capMix.map(function (c) { return '<span class="' + NS + 'chip">' + c + "</span>"; }).join("") + "</div>"
+    });
+    ak.push("Capital letters: " + capMix.filter(function (c) { return c === c.toUpperCase(); }).join(", "));
+
+    // 2. Identify Small Letters
+    var smMix = shuffle(pick(alphaU, 6).concat(pick(alphaL, 6)));
+    acts.push({
+      title: "Identify Small Letters — Underline all the small letters below.",
+      langKey: "identify_small",
+      body: '<div class="' + NS + 'chip_row">' + smMix.map(function (c) { return '<span class="' + NS + 'chip">' + c + "</span>"; }).join("") + "</div>"
+    });
+    ak.push("Small letters: " + smMix.filter(function (c) { return c === c.toLowerCase(); }).join(", "));
+
+    // 3. Match Capital with Small Letters
+    var mLetters = pick(alphaU, diff === "Beginner" ? 5 : 6);
+    var mSmall = shuffle(mLetters.map(function (c) { return c.toLowerCase(); }));
+    acts.push({
+      title: "Match Capital Letters with Small Letters — Write the matching small letter.",
+      langKey: "match_case",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Column A (Capital)</th><th>Column B (Small)</th><th>Your Match</th></tr></thead><tbody>' +
+        mLetters.map(function (c, i) {
+          return "<tr><td>" + (i + 1) + ". <strong>" + c + "</strong></td><td>(" + String.fromCharCode(97 + i) + ") <strong>" + mSmall[i] + "</strong></td><td></td></tr>";
+        }).join("") + "</tbody></table>"
+    });
+    ak.push(mLetters.map(function (c) { return c + " - " + c.toLowerCase(); }).join(", "));
+
+    // 4. Fill Missing Letters in Alphabetical Order
+    var startI = Math.floor(Math.random() * 14);
+    var seq = alphaU.slice(startI, startI + 10);
+    var bPos = [1, 3, 6, 8];
+    acts.push({
+      title: "Missing Letters — Fill in the missing letters in alphabetical order.",
+      langKey: "missing_alpha",
+      body: '<p style="font-size:1.15em;letter-spacing:2px;font-weight:700;">' +
+        seq.map(function (c, i) { return bPos.indexOf(i) !== -1 ? "___" : c; }).join(" &nbsp; ") + "</p>"
+    });
+    ak.push("Missing letters: " + bPos.map(function (i) { return seq[i]; }).join(", "));
+
+    // 5. Arrange Jumbled Letters in Alphabetical Order
+    var j1 = pick(alphaU, 5);
+    var j2 = pick(alphaL, 5);
+    acts.push({
+      title: "Alphabetical Order — Arrange the jumbled letters from A to Z.",
+      langKey: "jumbled_alpha",
+      body: '<ol class="' + NS + 'q_list"><li>' + j1.join(", ") + " &rarr; _____________________________</li><li>" + j2.join(", ") + " &rarr; _____________________________</li></ol>"
+    });
+    ak.push("1) " + j1.slice().sort().join(", ") + " | 2) " + j2.slice().sort().join(", "));
+
+    // 6. Circle the Vowels
+    var vMix = shuffle(pick(vowels, 4).concat(pick(cons, 8)));
+    acts.push({
+      title: "Circle the Vowels — Find and circle the vowels (A, E, I, O, U).",
+      langKey: "circle_vowels",
+      body: '<div class="' + NS + 'chip_row">' + vMix.map(function (c) { return '<span class="' + NS + 'chip">' + c + "</span>"; }).join("") + "</div>"
+    });
+    ak.push("Vowels: " + vMix.filter(function (c) { return vowels.indexOf(c) !== -1; }).join(", "));
+
+    // 7. Identify Consonants
+    var cMix = shuffle(pick(vowels, 3).concat(pick(cons, 6)));
+    acts.push({
+      title: "Identify Consonants — Write only the consonants from the box below.",
+      langKey: "identify_cons",
+      body: '<div class="' + NS + 'word_bank"><strong>Letters:</strong> ' + cMix.join(" &nbsp; ") + "</div>" + writingLines(1)
+    });
+    ak.push("Consonants: " + cMix.filter(function (c) { return vowels.indexOf(c) === -1; }).join(", "));
+
+    // 8. Complete Words Using Missing Vowels
+    var vwPool = senior
+      ? [{ w: "book", s: "b _ _ k" }, { w: "desk", s: "d _ s k" }, { w: "road", s: "r _ _ d" }, { w: "pen", s: "p _ n" }, { w: "map", s: "m _ p" }, { w: "bus", s: "b _ s" }, { w: "time", s: "t _ m _" }, { w: "farm", s: "f _ r m" }]
+      : [{ w: "bag", s: "b _ g" }, { w: "cup", s: "c _ p" }, { w: "sun", s: "s _ n" }, { w: "pen", s: "p _ n" }, { w: "pot", s: "p _ t" }, { w: "hat", s: "h _ t" }, { w: "net", s: "n _ t" }, { w: "pin", s: "p _ n" }];
+    var vwPick = pick(vwPool, 6);
+    acts.push({
+      title: "Complete Words Using Missing Vowels (a, e, i, o, u).",
+      langKey: "missing_vowel_word",
+      body: '<ol class="' + NS + 'q_list">' + vwPick.map(function (x) { return "<li><strong>" + x.s + "</strong> &rarr; Full word: ____________</li>"; }).join("") + "</ol>"
+    });
+    ak.push(vwPick.map(function (x) { return x.w; }).join(", "));
+
+    // 9. Match Letters with Familiar Picture Words
+    var pics = [
+      { l: "B", w: "Book", ic: "book" },
+      { l: "C", w: "Clock", ic: "clock" },
+      { l: "T", w: "Tree", ic: "tree" },
+      { l: "H", w: "House", ic: "house" },
+      { l: "S", w: "Sun", ic: "sun" },
+      { l: "P", w: "Pen", ic: "pen" }
+    ];
+    var pPick = pick(pics, 4);
+    var pShuf = shuffle(pPick);
+    acts.push({
+      title: "Match Letters with Familiar Picture Words.",
+      langKey: "match_letter_word",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Letter</th><th>Picture &amp; Word</th><th>Write Word</th></tr></thead><tbody>' +
+        pPick.map(function (p, i) {
+          return "<tr><td><strong>" + p.l + "</strong></td><td>" + miniSvg(pShuf[i].ic) + " &nbsp; " + pShuf[i].w + "</td><td></td></tr>";
+        }).join("") + "</tbody></table>"
+    });
+    ak.push(pPick.map(function (p) { return p.l + " - " + p.w; }).join(", "));
+
+    // 10. Identify First and Last Letter
+    var flWords = pick(W4, 5).map(function (x) { return x.w; });
+    acts.push({
+      title: "First and Last Letters — Write the first letter and last letter of each word.",
+      langKey: "first_letter",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Word</th><th>First Letter</th><th>Last Letter</th></tr></thead><tbody>' +
+        flWords.map(function (w) { return "<tr><td><strong>" + w + "</strong></td><td></td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(flWords.map(function (w) { return w + " (" + w[0] + ", " + w[w.length - 1] + ")"; }).join(" | "));
+
+    // 11. Before and After Letters
+    var baList = pick(alphaU.slice(1, 25), 4);
+    acts.push({
+      title: "Before and After Letters — Write the letters that come before and after each given letter.",
+      langKey: "before_after",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Before</th><th>Given Letter</th><th>After</th></tr></thead><tbody>' +
+        baList.map(function (ch) { return "<tr><td></td><td style='text-align:center;'><strong>" + ch + "</strong></td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(baList.map(function (ch) {
+      var code = ch.charCodeAt(0);
+      return String.fromCharCode(code - 1) + "-" + ch + "-" + String.fromCharCode(code + 1);
+    }).join(" | "));
+
+    // 12. Differentiate Vowels and Consonants
+    var sortPool = shuffle(pick(vowels, 3).concat(pick(cons, 5)));
+    acts.push({
+      title: "Differentiate Between Vowels and Consonants — Write each letter in the correct column.",
+      langKey: "sort_vc",
+      body: '<div class="' + NS + 'word_bank"><strong>Letters:</strong> ' + sortPool.join(" &nbsp; ") + "</div>" +
+        '<table class="' + NS + 'table"><thead><tr><th>Vowels</th><th>Consonants</th></tr></thead><tbody><tr><td style="height:42px;"></td><td></td></tr></tbody></table>'
+    });
+    ak.push("Vowels: " + sortPool.filter(function (c) { return vowels.indexOf(c) !== -1; }).join(", ") +
+      " | Consonants: " + sortPool.filter(function (c) { return vowels.indexOf(c) === -1; }).join(", "));
+
+    // 13. Find Target Letter & Write the Alphabet Independently
+    var tgt = pick(["B", "D", "M", "P", "R", "S", "T"], 1)[0];
+    var gridC = shuffle([tgt, tgt, tgt, tgt].concat(pick(cons.filter(function (c) { return c !== tgt; }), 10)));
+    acts.push({
+      title: "Find the Letter '" + tgt + "' & Write the Alphabet Independently.",
+      langKey: "write_alpha",
+      body: "<p><strong>A. Circle every '" + tgt + "' in this group:</strong></p>" +
+        '<div class="' + NS + 'chip_row">' + gridC.map(function (c) { return '<span class="' + NS + 'chip">' + c + "</span>"; }).join("") + "</div>" +
+        "<p><strong>B. Write A to Z independently:</strong></p>" + writingLines(2)
+    });
+    ak.push("Target letter '" + tgt + "' appears 4 times. Alphabet: A to Z.");
+
+    return {
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Recognises capital and small letters accurately",
+        "Identifies vowels and consonants",
+        "Arranges letters in alphabetical order",
+        "Identifies first and last letters of familiar words"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     5. LO-1 WORD STAGE (LEVELS A, B, C, D + EXTRAS — 12 ACTIVITIES)
+     ========================================================================== */
+  function scramble(word) {
+    var arr = word.split("");
+    for (var i = 0; i < 8; i++) {
+      var s = shuffle(arr).join("");
+      if (s !== word) return s;
+    }
+    return arr.reverse().join("");
+  }
+
+  function buildLO1Word() {
+    var NS = sgflnpractice2026_NS;
+    var acts = [];
+    var ak = [];
+
+    // Level A: 2-Letter Words
+    var w2a = pick(W2, 6);
+    acts.push({
+      title: "Level A (2-Letter Words): Read & Complete Missing Letters",
+      langKey: "missing_letters_word",
+      body: '<div class="' + NS + 'word_bank"><strong>Read aloud:</strong> ' + w2a.map(function (x) { return x.w; }).join(" &nbsp;|&nbsp; ") + "</div>" +
+        '<ol class="' + NS + 'q_list">' + w2a.slice(0, 5).map(function (x) { return "<li><strong>" + x.w[0] + " _</strong> (" + esc(x.m) + ") &rarr; ______</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w2a.slice(0, 5).map(function (x) { return x.w; }).join(", "));
+
+    var w2b = pick(W2, 4);
+    acts.push({
+      title: "Level A (2-Letter Words): Arrange Jumbled Letters",
+      langKey: "jumbled_word",
+      body: '<ol class="' + NS + 'q_list">' + w2b.map(function (x) { return "<li><strong>" + x.w[1] + " " + x.w[0] + "</strong> (" + esc(x.m) + ") &rarr; ______</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w2b.map(function (x) { return x.w; }).join(", "));
+
+    // Level B: 3-Letter Words
+    var w3a = pick(W3, 5);
+    acts.push({
+      title: "Level B (3-Letter Words): Complete Missing Letters",
+      langKey: "missing_letters_word",
+      body: '<ol class="' + NS + 'q_list">' + w3a.map(function (x) { return "<li><strong>" + x.w[0] + " _ " + x.w[2] + "</strong> (" + esc(x.m) + ") &rarr; ________</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w3a.map(function (x) { return x.w; }).join(", "));
+
+    var w3b = pick(W3, 5);
+    acts.push({
+      title: "Level B (3-Letter Words): Circle the Correctly Spelt Word",
+      langKey: "correct_spelling",
+      body: '<ol class="' + NS + 'q_list">' + w3b.map(function (x) { return "<li>" + shuffle([x.w, x.wrong[0], x.wrong[1]]).join(" &nbsp;&nbsp;/&nbsp;&nbsp; ") + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w3b.map(function (x) { return x.w; }).join(", "));
+
+    acts.push({
+      title: "Level B (3-Letter Words): Group Words by Their First Letter",
+      langKey: "group_first_letter",
+      body: '<div class="' + NS + 'word_bank"><strong>Words:</strong> ' + shuffle(["bag", "bus", "cap", "cup", "pan", "pen", "pin", "sun"]).join(" &nbsp; ") + "</div>" +
+        '<table class="' + NS + 'table"><thead><tr><th>B</th><th>C</th><th>P</th><th>S</th></tr></thead><tbody><tr><td style="height:40px;"></td><td></td><td></td><td></td></tr></tbody></table>'
+    });
+    ak.push("B: bag, bus | C: cap, cup | P: pan, pen, pin | S: sun");
+
+    // Level C: 4-Letter Words
+    var w4a = pick(W4, 5);
+    acts.push({
+      title: "Level C (4-Letter Words): Complete Missing Vowels",
+      langKey: "missing_vowel_word",
+      body: '<ol class="' + NS + 'q_list">' + w4a.map(function (x) { return "<li><strong>" + x.w.replace(/[aeiou]/g, "_").split("").join(" ") + "</strong> (" + esc(x.m) + ") &rarr; __________</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w4a.map(function (x) { return x.w; }).join(", "));
+
+    var w4b = pick(W4, 5);
+    var w4Shuf = shuffle(w4b);
+    acts.push({
+      title: "Level C (4-Letter Words): Match Words with Meanings",
+      langKey: "match_meaning",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Word</th><th>Meaning</th><th>Match</th></tr></thead><tbody>' +
+        w4b.map(function (x, i) { return "<tr><td>" + (i + 1) + ". <strong>" + x.w + "</strong></td><td>(" + String.fromCharCode(97 + i) + ") " + esc(w4Shuf[i].m) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(w4b.map(function (x) { return x.w + " = " + x.m; }).join(" | "));
+
+    var w4c = pick(W4, 4);
+    acts.push({
+      title: "Level C (4-Letter Words): Arrange Jumbled Letters",
+      langKey: "jumbled_word",
+      body: '<ol class="' + NS + 'q_list">' + w4c.map(function (x) { return "<li><strong>" + scramble(x.w).toUpperCase() + "</strong> &rarr; ____________</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w4c.map(function (x) { return x.w; }).join(", "));
+
+    // Level D: 5-Letter Words
+    var w5a = pick(W5, 5);
+    acts.push({
+      title: "Level D (5-Letter Words): Identify the Correct Spelling",
+      langKey: "correct_spelling",
+      body: '<ol class="' + NS + 'q_list">' + w5a.map(function (x) { return "<li>" + shuffle([x.w, x.wrong[0], x.wrong[1]]).join(" &nbsp;&nbsp;/&nbsp;&nbsp; ") + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(w5a.map(function (x) { return x.w; }).join(", "));
+
+    var w5b = pick(W5, 3);
+    acts.push({
+      title: "Level D (5-Letter Words): Use Familiar Words in Simple Sentences",
+      langKey: "use_in_sentence",
+      body: '<ol class="' + NS + 'q_list">' + w5b.map(function (x) { return "<li><strong>" + x.w + "</strong> (" + esc(x.m) + "):" + writingLines(1) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Sample sentences using " + w5b.map(function (x) { return x.w; }).join(", ") + ": Accept any clear, meaningful sentence.");
+
+    // Additional Word Activities
+    var oddSets = [
+      { list: ["apple", "mango", "bench", "grape"], odd: "bench" },
+      { list: ["chair", "table", "river", "desk"], odd: "river" },
+      { list: ["tiger", "goat", "deer", "clock"], odd: "clock" },
+      { list: ["green", "black", "white", "train"], odd: "train" }
+    ];
+    acts.push({
+      title: "Find the Odd Word — Circle the word that does not belong to the group.",
+      langKey: "odd_word",
+      body: '<ol class="' + NS + 'q_list">' + oddSets.map(function (s) { return "<li>" + shuffle(s.list).join(" &nbsp;|&nbsp; ") + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Odd words: " + oddSets.map(function (s) { return s.odd; }).join(", "));
+
+    acts.push({
+      title: "Group Words by Category & Make New Words",
+      langKey: "group_category",
+      body: '<div class="' + NS + 'word_bank"><strong>Words:</strong> ' + shuffle(["goat", "fish", "apple", "mango", "green", "black", "book", "chair", "read", "walk"]).join(" &nbsp; ") + "</div>" +
+        '<table class="' + NS + 'table"><thead><tr><th>Animals</th><th>Fruits</th><th>Colours</th><th>Objects</th><th>Actions</th></tr></thead><tbody><tr><td style="height:44px;"></td><td></td><td></td><td></td><td></td></tr></tbody></table>' +
+        "<p style='margin-top:8px;'><strong>Bonus — Make 3 real words using letters from: T, E, A, R, S, P</strong></p>" + writingLines(1)
+    });
+    ak.push("Animals: goat, fish | Fruits: apple, mango | Colours: green, black | Objects: book, chair | Actions: read, walk | Bonus samples: eat, tea, star, part, seat, rest.");
+
+    return {
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Reads 2-letter and 3-letter words accurately",
+        "Reads and spells familiar 4-letter and 5-letter words",
+        "Matches words with meanings and categories",
+        "Uses familiar words in simple sentences"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     6. LO-1 SENTENCE STAGE (12 DISTINCT ACTIVITIES)
+     ========================================================================== */
+  function buildLO1Sentence(cfg) {
+    var NS = sgflnpractice2026_NS;
+    var diff = cfg.difficulty;
+    var acts = [];
+    var ak = [];
+
+    var sets = [
+      {
+        title: "Morning at School",
+        sents: [
+          "The school bell rings at nine o'clock.",
+          "Students stand in neat lines for assembly.",
+          "The headmaster speaks about good habits.",
+          "Everyone walks quietly to their classroom."
+        ]
+      },
+      {
+        title: "Helping at Home",
+        sents: [
+          "Meena waters the plants every morning.",
+          "Her brother sweeps the front courtyard.",
+          "Their mother prepares hot breakfast in the kitchen.",
+          "The family eats together before leaving for work and school."
+        ]
+      }
+    ];
+    var chosen = pick(sets, 1)[0];
+
+    acts.push({
+      title: "Read the Sentences Aloud — Read each sentence clearly and tick the box.",
+      langKey: "read_aloud",
+      body: '<ol class="' + NS + 'q_list">' + chosen.sents.map(function (s) { return '<li><span class="' + NS + 'box_sq"></span> ' + esc(s) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Oral reading check: Student reads all 4 sentences clearly with proper pauses.");
+
+    var jSents = pick([
+      { j: "school / to / walks / Ravi / daily", a: "Ravi walks to school daily." },
+      { j: "reading / is / book / a / Sita", a: "Sita is reading a book." },
+      { j: "clean / keep / classroom / our / We", a: "We keep our classroom clean." },
+      { j: "shines / sky / in / the / The sun", a: "The sun shines in the sky." }
+    ], 3);
+    acts.push({
+      title: "Arrange Jumbled Words to Make Sentences.",
+      langKey: "jumbled_sentence",
+      body: '<ol class="' + NS + 'q_list">' + jSents.map(function (x) { return "<li><strong>" + esc(x.j) + "</strong>" + writingLines(1) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(jSents.map(function (x, i) { return (i + 1) + ") " + x.a; }).join(" | "));
+
+    var fillItems = [
+      { s: "Please drink clean ________ every day.", a: "water" },
+      { s: "We borrow storybooks from the ________.", a: "library" },
+      { s: "Carry an ________ when it rains.", a: "umbrella" },
+      { s: "Our ________ writes clearly on the board.", a: "teacher" }
+    ];
+    acts.push({
+      title: "Fill in Missing Words — Choose the correct word from the box.",
+      langKey: "fill_blank",
+      body: '<div class="' + NS + 'word_bank"><strong>Word Bank:</strong> ' + shuffle(["library", "water", "umbrella", "teacher"]).join(" &nbsp;|&nbsp; ") + "</div>" +
+        '<ol class="' + NS + 'q_list">' + fillItems.map(function (x) { return "<li>" + esc(x.s) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(fillItems.map(function (x, i) { return (i + 1) + ") " + x.a; }).join(", "));
+
+    var cPairs = [
+      { opts: ["He go to school every day.", "He goes to school every day."], a: "He goes to school every day." },
+      { opts: ["The books are on the table.", "The books is on the table."], a: "The books are on the table." },
+      { opts: ["She writes neatly in her notebook.", "She write neatly in her notebook."], a: "She writes neatly in her notebook." }
+    ];
+    acts.push({
+      title: "Choose the Correct Sentence — Tick (✓) the correct sentence in each pair.",
+      langKey: "choose_correct",
+      body: '<ol class="' + NS + 'q_list">' + cPairs.map(function (p) {
+        var sh = shuffle(p.opts);
+        return '<li><span class="' + NS + 'box_sq"></span> ' + esc(sh[0]) + '<br><span class="' + NS + 'box_sq"></span> ' + esc(sh[1]) + "</li>";
+      }).join("") + "</ol>"
+    });
+    ak.push(cPairs.map(function (p, i) { return (i + 1) + ") " + p.a; }).join(" | "));
+
+    var actS = [
+      { s: "The farmer ploughs the field.", a: "ploughs" },
+      { s: "Students draw a map of Karnataka.", a: "draw" },
+      { s: "Birds build nests on tall trees.", a: "build" },
+      { s: "Anil plays kabaddi in the evening.", a: "plays" }
+    ];
+    acts.push({
+      title: "Identify the Action Word — Write the action word from each sentence.",
+      langKey: "find_action",
+      body: '<ol class="' + NS + 'q_list">' + actS.map(function (x) { return "<li>" + esc(x.s) + " &rarr; ______________</li>"; }).join("") + "</ol>"
+    });
+    ak.push(actS.map(function (x) { return x.a; }).join(", "));
+
+    var qa = [
+      { q: "Where do you live?", a: "I live near the bus stand." },
+      { q: "What is your favourite subject?", a: "My favourite subject is Science." },
+      { q: "When does school start?", a: "School starts at nine o'clock." },
+      { q: "How do you come to school?", a: "I come to school on foot." }
+    ];
+    var qaS = shuffle(qa);
+    acts.push({
+      title: "Match Questions with Suitable Sentences.",
+      langKey: "match_qa",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Question</th><th>Suitable Sentence</th><th>Match</th></tr></thead><tbody>' +
+        qa.map(function (x, i) { return "<tr><td>" + (i + 1) + ". " + esc(x.q) + "</td><td>(" + String.fromCharCode(97 + i) + ") " + esc(qaS[i].a) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(qa.map(function (x, i) { return (i + 1) + " - " + x.a; }).join(" | "));
+
+    var whoS = [
+      { s: "The bus driver stops at the village gate.", who: "The bus driver", what: "stops at the village gate" },
+      { s: "Deepa helps her grandmother carry water.", who: "Deepa", what: "helps her grandmother carry water" },
+      { s: "The gardener trims the green hedge.", who: "The gardener", what: "trims the green hedge" }
+    ];
+    acts.push({
+      title: "Identify Who & What — Read each sentence and complete the table.",
+      langKey: "who_what",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Sentence</th><th>Who is performing the action?</th><th>What is happening?</th></tr></thead><tbody>' +
+        whoS.map(function (x) { return "<tr><td>" + esc(x.s) + "</td><td></td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(whoS.map(function (x) { return "Who: " + x.who + "; What: " + x.what; }).join(" | "));
+
+    var ord = [
+      "First, wash your hands with soap and water.",
+      "Next, sit neatly with your lunch box.",
+      "Then, eat your meal slowly without wasting food.",
+      "Finally, wash your box and throw waste in the bin."
+    ];
+    acts.push({
+      title: "Put Sentences in the Correct Order (Number 1 to 4).",
+      langKey: "order_events",
+      body: '<ol class="' + NS + 'q_list">' + shuffle(ord).map(function (s) { return "<li>[ &nbsp;&nbsp; ] &nbsp; " + esc(s) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Order: 1) " + ord[0] + " 2) " + ord[1] + " 3) " + ord[2] + " 4) " + ord[3]);
+
+    var vis = [
+      { ic: "bus", s: "The yellow bus stops near the school gate." },
+      { ic: "clock", s: "The wall clock shows nine o'clock." },
+      { ic: "tree", s: "A tall tree gives cool shade in summer." }
+    ];
+    var visS = shuffle(vis);
+    acts.push({
+      title: "Match Sentences with Pictures — Write the picture number next to the matching sentence.",
+      langKey: "match_qa",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Picture</th><th>Sentence</th><th>Number</th></tr></thead><tbody>' +
+        vis.map(function (v, i) { return "<tr><td style='text-align:center;'>" + (i + 1) + ". " + miniSvg(v.ic) + "</td><td>" + esc(visS[i].s) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(vis.map(function (v, i) { return (i + 1) + " - " + v.s; }).join(" | "));
+
+    var errs = [
+      { b: "my friend lives in mysuru", g: "My friend lives in Mysuru." },
+      { b: "we play football on sunday", g: "We play football on Sunday." },
+      { b: "the teacher are in the class.", g: "The teacher is in the class." }
+    ];
+    acts.push({
+      title: "Find and Correct Simple Sentence Errors — Rewrite each sentence correctly.",
+      langKey: "fix_error",
+      body: '<ol class="' + NS + 'q_list">' + errs.map(function (x) { return "<li>" + esc(x.b) + writingLines(1) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(errs.map(function (x, i) { return (i + 1) + ") " + x.g; }).join(" | "));
+
+    acts.push({
+      title: "Complete Sentences Using Suitable Words.",
+      langKey: "complete_starter",
+      body: (diff === "Beginner" ? '<div class="' + NS + 'word_bank"><strong>Helpful words:</strong> storybooks, wake up early, a clean school, fresh air</div>' : "") +
+        '<ol class="' + NS + 'q_list"><li>I like to read ___________________________.</li><li>Every morning, I ___________________________.</li><li>Our village has ___________________________.</li></ol>'
+    });
+    ak.push("Sample: 1) storybooks. 2) wake up early and study. 3) a clean school. (Accept any meaningful sentence.)");
+
+    acts.push({
+      title: "Write a Suitable Title & Read and Draw — Give a title to the sentences in Activity 1, then sketch one detail.",
+      langKey: "title_main",
+      body: "<p><strong>Suitable Title:</strong> ______________________________________________</p>" + '<div class="' + NS + 'draw_box"></div>'
+    });
+    ak.push("Suggested Title: " + chosen.title + " (Accept any suitable title).");
+
+    return {
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Reads 3–5 simple sentences aloud with understanding",
+        "Identifies who is acting and what is happening",
+        "Arranges words and sentences in logical order",
+        "Corrects simple sentence errors accurately"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     7. LO-1 SHORT PARAGRAPH STAGE (12 ACTIVITIES)
+     ========================================================================== */
+  function buildLO1Paragraph(cfg, sheetIdx) {
+    var NS = sgflnpractice2026_NS;
+    var p = PASSAGES[sheetIdx % PASSAGES.length];
+    var acts = [];
+    var ak = [];
+
+    var introHtml = '<div class="' + NS + 'passage"><div class="' + NS + 'passage_title">Reading Paragraph: ' + esc(p.topic) + "</div><p>" + esc(p.text) + "</p></div>";
+
+    acts.push({
+      title: "Read the Paragraph Aloud — Read the passage twice clearly.",
+      langKey: "read_aloud",
+      body: '<p><span class="' + NS + 'box_sq"></span> First Reading &nbsp;&nbsp;&nbsp;&nbsp; <span class="' + NS + 'box_sq"></span> Second Reading</p>'
+    });
+    ak.push("Oral reading check: Student reads smoothly with clear pronunciation.");
+
+    acts.push({
+      title: "Choose a Suitable Title — Tick (✓) the best title.",
+      langKey: "title_main",
+      body: shuffle(p.titles).map(function (t) { return '<div><span class="' + NS + 'box_sq"></span> ' + esc(t) + "</div>"; }).join("")
+    });
+    ak.push("Best title: " + p.correctTitle);
+
+    acts.push({
+      title: "Identify the Main Idea — Tick (✓) the best statement.",
+      langKey: "title_main",
+      body: shuffle(p.mainIdeaOptions).map(function (m) { return '<div style="margin-bottom:4px;"><span class="' + NS + 'box_sq"></span> ' + esc(m) + "</div>"; }).join("")
+    });
+    ak.push("Main idea: " + p.mainIdea);
+
+    var vS = shuffle(p.vocab);
+    acts.push({
+      title: "Match Words with Meanings.",
+      langKey: "match_meaning",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Word</th><th>Meaning</th><th>Match</th></tr></thead><tbody>' +
+        p.vocab.map(function (v, i) { return "<tr><td>" + (i + 1) + ". <strong>" + esc(v.word) + "</strong></td><td>(" + String.fromCharCode(97 + i) + ") " + esc(vS[i].meaning) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(p.vocab.map(function (v) { return v.word + " = " + v.meaning; }).join(" | "));
+
+    acts.push({
+      title: "Find Specific Information in the Paragraph.",
+      langKey: "answer_wh",
+      body: "<p><strong>Question:</strong> " + esc(p.specificQ) + "</p>" + writingLines(2)
+    });
+    ak.push(p.specificA);
+
+    acts.push({
+      title: "Complete Missing Words Using the Paragraph.",
+      langKey: "fill_blank",
+      body: '<ol class="' + NS + 'q_list">' + p.blanks.map(function (b) { return "<li>" + esc(b.s) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(p.blanks.map(function (b, i) { return (i + 1) + ") " + b.a; }).join(", "));
+
+    acts.push({
+      title: "Mark Statements as True or False.",
+      langKey: "true_false",
+      body: '<ol class="' + NS + 'q_list">' + p.tf.map(function (t) { return "<li>" + esc(t.s) + " &nbsp; [ ____________ ]</li>"; }).join("") + "</ol>"
+    });
+    ak.push(p.tf.map(function (t, i) { return (i + 1) + ") " + t.a; }).join(", "));
+
+    acts.push({
+      title: "Arrange Events in the Correct Order (1 to 4).",
+      langKey: "order_events",
+      body: '<ol class="' + NS + 'q_list">' + shuffle(p.events).map(function (e) { return "<li>[ &nbsp;&nbsp; ] &nbsp; " + esc(e) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Order: " + p.events.map(function (e, i) { return (i + 1) + ") " + e; }).join(" "));
+
+    acts.push({
+      title: "Identify People, Places, and Objects from the Paragraph.",
+      langKey: "who_what",
+      body: '<table class="' + NS + 'table"><thead><tr><th>People</th><th>Places</th><th>Objects / Things</th></tr></thead><tbody><tr><td style="height:44px;"></td><td></td><td></td></tr></tbody></table>'
+    });
+    ak.push("People: " + p.entities.people + " | Places: " + p.entities.places + " | Objects: " + p.entities.objects);
+
+    acts.push({
+      title: "Select the Correct Answer — Circle the right option.",
+      langKey: "choose_correct",
+      body: "<p><strong>" + esc(p.mcq.q) + "</strong></p><p>" + p.mcq.opts.map(function (o, i) { return "(" + String.fromCharCode(97 + i) + ") " + esc(o); }).join(" &nbsp;&nbsp;&nbsp; ") + "</p>"
+    });
+    ak.push("Correct answer: " + p.mcq.a);
+
+    acts.push({
+      title: "Find a Word & Complete a Sentence Using the Paragraph.",
+      langKey: "fill_blank",
+      body: "<p><strong>A.</strong> " + esc(p.findWord.clue) + " &rarr; ______________</p>" +
+        "<p><strong>B.</strong> " + esc(p.completeSent.stem) + " ______________________________________</p>"
+    });
+    ak.push("A) " + p.findWord.a + " | B) " + p.completeSent.stem + " " + p.completeSent.a);
+
+    acts.push({
+      title: "Oral Questions & Retell the Paragraph in Simple English.",
+      langKey: "oral_retell",
+      body: "<p>Tell your partner or teacher: (1) What is the paragraph about? (2) Mention two key details from the text.</p>" +
+        '<p><span class="' + NS + 'box_sq"></span> Retold clearly in simple English (Teacher / Partner check)</p>'
+    });
+    ak.push("Oral rubric: Student states the topic (" + p.topic + ") and recalls at least 2 details from the paragraph.");
+
+    return {
+      introHtml: introHtml,
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Reads a 3–5 sentence paragraph with understanding",
+        "Identifies the main idea and suitable title",
+        "Locates specific details and word meanings in the text",
+        "Retells the paragraph in simple English"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     8. LO-2 READING COMPREHENSION (12 ACTIVITIES — WHO / WHAT / WHERE / WHY)
+     ========================================================================== */
+  function buildLO2(cfg, sheetIdx) {
+    var NS = sgflnpractice2026_NS;
+    var pool = PASSAGES;
+    if (cfg.focus === "school") pool = PASSAGES.filter(function (x) { return x.category === "school"; });
+    else if (cfg.focus === "everyday") pool = PASSAGES.filter(function (x) { return x.category === "everyday"; });
+    if (pool.length < 2) pool = PASSAGES;
+
+    var p1 = pool[sheetIdx % pool.length];
+    var p2 = pool[(sheetIdx + 1) % pool.length];
+    var acts = [];
+    var ak = [];
+
+    var introHtml = '<div class="' + NS + 'passage"><div class="' + NS + 'passage_title">Passage A: ' + esc(p1.topic) + "</div><p>" + esc(p1.text) + "</p></div>";
+
+    acts.push({ title: "Passage A — WHO Question", langKey: "answer_wh", body: "<p>" + esc(p1.whoQ) + "</p>" + writingLines(1) });
+    ak.push(p1.whoA);
+
+    acts.push({ title: "Passage A — WHAT Question", langKey: "answer_wh", body: "<p>" + esc(p1.whatQ) + "</p>" + writingLines(1) });
+    ak.push(p1.whatA);
+
+    acts.push({ title: "Passage A — WHERE Question", langKey: "answer_wh", body: "<p>" + esc(p1.whereQ) + "</p>" + writingLines(1) });
+    ak.push(p1.whereA);
+
+    acts.push({ title: "Passage A — WHY Question (Simple Reasoning)", langKey: "answer_wh", body: "<p>" + esc(p1.whyQ) + "</p>" + writingLines(2) });
+    ak.push(p1.whyA);
+
+    acts.push({
+      title: "Passage A — Fill in the Blanks Using Passage Information",
+      langKey: "fill_blank",
+      body: '<ol class="' + NS + 'q_list">' + p1.blanks.map(function (b) { return "<li>" + esc(b.s) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(p1.blanks.map(function (b, i) { return (i + 1) + ") " + b.a; }).join(", "));
+
+    acts.push({
+      title: "Passage A — Mark True or False",
+      langKey: "true_false",
+      body: '<ol class="' + NS + 'q_list">' + p1.tf.map(function (t) { return "<li>" + esc(t.s) + " &nbsp; [ ____________ ]</li>"; }).join("") + "</ol>"
+    });
+    ak.push(p1.tf.map(function (t, i) { return (i + 1) + ") " + t.a; }).join(", "));
+
+    var qaA = [{ q: p1.whoQ, a: p1.whoA }, { q: p1.whereQ, a: p1.whereA }, { q: p1.whyQ, a: p1.whyA }];
+    var qaAS = shuffle(qaA);
+    acts.push({
+      title: "Passage A — Match Questions with Answers",
+      langKey: "match_qa",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Question</th><th>Answer</th><th>Match</th></tr></thead><tbody>' +
+        qaA.map(function (x, i) { return "<tr><td>" + (i + 1) + ". " + esc(x.q) + "</td><td>(" + String.fromCharCode(97 + i) + ") " + esc(qaAS[i].a) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(qaA.map(function (x, i) { return (i + 1) + " - " + x.a; }).join(" | "));
+
+    acts.push({
+      title: "Read Passage B (" + p2.topic + ") — Choose the Correct Answer & Find a Detail",
+      langKey: "choose_correct",
+      body: '<div class="' + NS + 'passage" style="margin-bottom:10px;"><p>' + esc(p2.text) + "</p></div>" +
+        "<p><strong>A. Circle the correct answer:</strong> " + esc(p2.mcq.q) + "<br>" +
+        p2.mcq.opts.map(function (o, i) { return "(" + String.fromCharCode(97 + i) + ") " + esc(o); }).join(" &nbsp;&nbsp;&nbsp; ") + "</p>" +
+        "<p><strong>B. Word Hunt:</strong> " + esc(p2.findWord.clue) + " &rarr; ______________</p>"
+    });
+    ak.push("A) " + p2.mcq.a + " | B) " + p2.findWord.a);
+
+    acts.push({
+      title: "Passage B — Answer in One Simple Sentence (Who & Why)",
+      langKey: "answer_wh",
+      body: "<p><strong>1.</strong> " + esc(p2.whoQ) + "</p>" + writingLines(1) + "<p><strong>2.</strong> " + esc(p2.whyQ) + "</p>" + writingLines(1)
+    });
+    ak.push("1) " + p2.whoA + " | 2) " + p2.whyA);
+
+    acts.push({
+      title: "Passage B — Arrange Events in Order (1 to 4)",
+      langKey: "order_events",
+      body: '<ol class="' + NS + 'q_list">' + shuffle(p2.events).map(function (e) { return "<li>[ &nbsp;&nbsp; ] &nbsp; " + esc(e) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Order: " + p2.events.map(function (e, i) { return (i + 1) + ") " + e; }).join(" "));
+
+    acts.push({
+      title: "Passage B — Complete the Sentence & Give a Suitable Title",
+      langKey: "title_main",
+      body: "<p><strong>Complete:</strong> " + esc(p2.completeSent.stem) + " ____________________________________</p>" +
+        "<p><strong>Suitable Title:</strong> ____________________________________</p>"
+    });
+    ak.push("Completed: " + p2.completeSent.stem + " " + p2.completeSent.a + " | Title: " + p2.correctTitle);
+
+    acts.push({
+      title: "Oral Practice — Retell Passage A or Passage B",
+      langKey: "oral_retell",
+      body: "<p>Tell your partner or teacher in 3–4 simple sentences: <strong>Who</strong> is in the passage, <strong>Where</strong> it happens, <strong>What</strong> happens, and <strong>Why</strong>.</p>" +
+        '<p><span class="' + NS + 'box_sq"></span> Retold accurately using passage details (Teacher / Partner check)</p>'
+    });
+    ak.push("Oral rubric: Student answers Who, What, Where, and Why orally based strictly on Passage A or B.");
+
+    return {
+      introHtml: introHtml,
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Answers direct Who, What, and Where questions from the text",
+        "Answers simple Why questions using passage details",
+        "Completes True/False, blanks, and event sequencing accurately",
+        "Retells key details of the passage orally"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     9. LO-3 INDEPENDENT SENTENCE WRITING (12 DISTINCT ACTIVITIES)
+     ========================================================================== */
+  function buildLO3(cfg) {
+    var NS = sgflnpractice2026_NS;
+    var diff = cfg.difficulty;
+    var acts = [];
+    var ak = [];
+
+    function scaffold(words, starters) {
+      var h = "";
+      if (diff === "Beginner") {
+        if (words) h += '<div class="' + NS + 'word_bank"><strong>Helpful Words:</strong> ' + words + "</div>";
+        if (starters) h += "<p><strong>Sentence Starters:</strong> " + starters + "</p>";
+      } else if (diff === "Developing") {
+        if (words) h += '<div class="' + NS + 'word_bank"><strong>Vocabulary Support:</strong> ' + words + "</div>";
+      }
+      return h;
+    }
+
+    acts.push({
+      title: "Write 3 Sentences About Yourself",
+      langKey: "write_ind",
+      body: scaffold("name, class, village/town, hobby, school", "My name is... / I study in... / I like...") + writingLines(3)
+    });
+    ak.push("Sample: My name is Arun. I study in Class " + cfg.cls + ". I live in Dharwad and enjoy reading books. (Accept any grammatically reasonable sentences.)");
+
+    acts.push({
+      title: "Write 3 Sentences About Your School",
+      langKey: "write_ind",
+      body: scaffold("clean, teachers, playground, library, friends", "My school name is... / It has... / I like my school because...") + writingLines(3)
+    });
+    ak.push("Sample: My school is clean and green. It has helpful teachers and a big playground. I enjoy learning with my friends.");
+
+    acts.push({
+      title: "Write 3–5 Sentences About Your Family",
+      langKey: "write_ind",
+      body: scaffold("parents, brother, sister, care, help, together", "There are ... members in my family. / My parents... / We...") + writingLines(4)
+    });
+    ak.push("Sample: There are four members in my family. My parents work hard and care for us. I help my family at home every evening.");
+
+    var wPrompts = pick(["water", "friend", "teacher", "morning", "garden", "bicycle", "book", "village"], 4);
+    acts.push({
+      title: "Write One Meaningful Sentence Using Each Given Word",
+      langKey: "use_in_sentence",
+      body: '<ol class="' + NS + 'q_list">' + wPrompts.map(function (w) { return "<li><strong>" + w + ":</strong>" + writingLines(1) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Sample sentences using " + wPrompts.join(", ") + ": Accept any clear, grammatically reasonable sentence.");
+
+    acts.push({
+      title: "Complete Sentence Starters Independently",
+      langKey: "complete_starter",
+      body: '<ol class="' + NS + 'q_list"><li>Every morning, I __________________________________________</li><li>My favourite subject is __________________________________________</li><li>After school, I usually __________________________________________</li><li>I feel happy when __________________________________________</li></ol>'
+    });
+    ak.push("Sample completions: 1) wake up at six o'clock. 2) English because I enjoy stories. 3) play and finish my homework. 4) I help my friends.");
+
+    acts.push({
+      title: "Describe the Picture in 3–5 Sentences",
+      langKey: "write_ind",
+      body: '<div style="margin:6px 0;">' + miniSvg("scene") + "</div>" +
+        scaffold("school building, flag, tree, sun, windows, ground", "This is a picture of... / There is a... / I can see...") + writingLines(4)
+    });
+    ak.push("Sample: This is a picture of a school. There is a flag in front of the building. A tall tree stands nearby, and the sun shines in the sky.");
+
+    var objC = pick(["My School Bag", "A Bicycle", "A Blackboard", "A Notebook"], 1)[0];
+    acts.push({
+      title: "Write 3 Sentences About a Familiar Object: " + objC,
+      langKey: "write_ind",
+      body: scaffold("colour, size, useful, daily, carry/use", "It is... / I use it to... / It helps me...") + writingLines(3)
+    });
+    ak.push("Sample (" + objC + "): It is very useful to me every day. It is neat and strong. I take good care of it.");
+
+    var arrW = [
+      { w: "clean / water / drink / We / should", a: "We should drink clean water." },
+      { w: "every / reads / newspaper / My father / day", a: "My father reads the newspaper every day." },
+      { w: "in / birds / fly / sky / The / the", a: "The birds fly in the sky." }
+    ];
+    acts.push({
+      title: "Arrange Given Words and Write Meaningful Sentences",
+      langKey: "jumbled_sentence",
+      body: '<ol class="' + NS + 'q_list">' + arrW.map(function (x) { return "<li><strong>" + esc(x.w) + "</strong>" + writingLines(1) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push(arrW.map(function (x, i) { return (i + 1) + ") " + x.a; }).join(" | "));
+
+    acts.push({
+      title: "Write 3 Sentences About Your Best Friend",
+      langKey: "write_ind",
+      body: scaffold("kind, helpful, study, play, share", "My best friend is... / He/She is... / We...") + writingLines(3)
+    });
+    ak.push("Sample: My best friend is Kavya. She is kind and helpful. We study and play together at school.");
+
+    var top10 = pick(["A Festival We Celebrate", "My Favourite Game", "A Visit to a Market"], 1)[0];
+    acts.push({
+      title: "Write 3–5 Sentences About: " + top10,
+      langKey: "write_ind",
+      body: scaffold("family, friends, enjoy, evening, useful, happy", "We... / It is... / I enjoy...") + writingLines(4)
+    });
+    ak.push("Sample (" + top10 + "): Accept 3–5 clear sentences describing the topic with correct basic punctuation.");
+
+    var top11 = pick(["A Useful Animal (Cow / Dog)", "A Useful Plant (Neem / Coconut Tree)"], 1)[0];
+    acts.push({
+      title: "Describe an Animal or a Plant: " + top11,
+      langKey: "write_ind",
+      body: scaffold("useful, strong/green, village, gives, care", "It is... / It gives us... / We should...") + writingLines(3)
+    });
+    ak.push("Sample (" + top11 + "): Accept 3 clear factual sentences about its appearance, use, and care.");
+
+    acts.push({
+      title: "Write 3–5 Sentences About What You Did Yesterday",
+      langKey: "write_ind",
+      body: scaffold("woke up, went, studied, played, helped, ate", "Yesterday, I... / Then I... / In the evening, I...") + writingLines(4)
+    });
+    ak.push("Sample: Yesterday, I woke up early and went to school. I attended my classes and played with my friends. In the evening, I completed my homework.");
+
+    return {
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Writes 3–5 meaningful sentences independently",
+        "Starts sentences with capital letters and ends with full stops",
+        "Uses familiar everyday vocabulary appropriately",
+        "Expresses original ideas clearly"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     10. LO-4 EVERYDAY ENGLISH COMMUNICATION (12 PRACTICAL ACTIVITIES)
+     ========================================================================== */
+  function buildLO4(cfg) {
+    var NS = sgflnpractice2026_NS;
+    var diff = cfg.difficulty;
+    var acts = [];
+    var ak = [];
+
+    acts.push({
+      title: "Introduce Yourself in 3–5 Sentences",
+      langKey: "write_ind",
+      body: (diff === "Beginner"
+        ? "<p>Hello! My name is __________________. I study in Class ______. I live in __________________. My favourite hobby is __________________. Nice to meet you!</p>"
+        : "<p>Write a polite self-introduction mentioning your name, class, place, and hobby.</p>" + writingLines(4))
+    });
+    ak.push("Sample: Good morning! My name is Sneha. I study in Class " + cfg.cls + ". I live in Tumakuru. I like drawing and playing kho-kho. Nice to meet you!");
+
+    var expr = [
+      { e: "Good morning, Sir.", r: "Good morning! How are you?" },
+      { e: "Thank you for helping me.", r: "You are welcome." },
+      { e: "I am sorry for being late.", r: "That is alright. Please be on time." },
+      { e: "May I borrow your pencil?", r: "Yes, sure. Here it is." },
+      { e: "How are you today?", r: "I am fine, thank you." }
+    ];
+    var exprS = shuffle(expr);
+    acts.push({
+      title: "Match Expressions with Their Responses",
+      langKey: "match_expr",
+      body: '<table class="' + NS + 'table"><thead><tr><th>Expression</th><th>Response</th><th>Match</th></tr></thead><tbody>' +
+        expr.map(function (x, i) { return "<tr><td>" + (i + 1) + ". " + esc(x.e) + "</td><td>(" + String.fromCharCode(97 + i) + ") " + esc(exprS[i].r) + "</td><td></td></tr>"; }).join("") + "</tbody></table>"
+    });
+    ak.push(expr.map(function (x, i) { return (i + 1) + " - " + x.r; }).join(" | "));
+
+    var sitC = [
+      { q: "You want to enter the classroom after class has started. What do you say?", opts: ["Open the door!", "May I come in, Madam?", "I am coming inside."], a: "May I come in, Madam?" },
+      { q: "You need drinking water during the break. How do you ask politely?", opts: ["Give water now.", "May I go to drink water, please?", "Water is there."], a: "May I go to drink water, please?" },
+      { q: "You did not hear a word the teacher said. What do you say?", opts: ["Excuse me, Sir. Could you please repeat that?", "Say it again fast.", "I don't know."], a: "Excuse me, Sir. Could you please repeat that?" }
+    ];
+    acts.push({
+      title: "Choose the Appropriate Classroom Expression — Tick (✓) the polite expression.",
+      langKey: "choose_correct",
+      body: '<ol class="' + NS + 'q_list">' + sitC.map(function (s) {
+        return "<li><strong>" + esc(s.q) + "</strong><br>" + s.opts.map(function (o) { return '<span class="' + NS + 'box_sq"></span> ' + esc(o) + "<br>"; }).join("") + "</li>";
+      }).join("") + "</ol>"
+    });
+    ak.push(sitC.map(function (s, i) { return (i + 1) + ") " + s.a; }).join(" | "));
+
+    acts.push({
+      title: "Complete the Conversation — Asking Someone's Name & Greeting",
+      langKey: "dialogue_fill",
+      body: (diff !== "Independent" ? '<div class="' + NS + 'word_bank"><strong>Helpful words:</strong> name, Class, Where, meet</div>' : "") +
+        "<p><strong>Raju:</strong> Hello! What is your __________?</p>" +
+        "<p><strong>Ananya:</strong> Hi! My name is Ananya. Which __________ are you in?</p>" +
+        "<p><strong>Raju:</strong> I am in Class " + esc(cfg.cls) + ". __________ do you live?</p>" +
+        "<p><strong>Ananya:</strong> I live near the main road. Nice to __________ you!</p>"
+    });
+    ak.push("name, Class, Where, meet");
+
+    acts.push({
+      title: "Asking and Telling the Time — Fill in the Missing Dialogue",
+      langKey: "dialogue_fill",
+      body: "<p><strong>Student A:</strong> Excuse me, what is the __________ now?</p>" +
+        "<p><strong>Student B:</strong> It is half past ten (10:30 AM).</p>" +
+        "<p><strong>Student A:</strong> When does the lunch break start?</p>" +
+        "<p><strong>Student B:</strong> It starts at ________________________.</p>" +
+        "<p><strong>Student A:</strong> ________________________ very much!</p>"
+    });
+    ak.push("time | Sample: one o'clock / 1:00 PM | Thank you");
+
+    acts.push({
+      title: "Respond to Everyday Situations — Permission, Requests & Apologising",
+      langKey: "respond_sit",
+      body: '<ol class="' + NS + 'q_list">' +
+        "<li>You forgot your scale and need to borrow one from a friend." + writingLines(1) + "</li>" +
+        "<li>You want to ask your teacher for permission to go to the library." + writingLines(1) + "</li>" +
+        "<li>You accidentally dropped your friend's notebook." + writingLines(1) + "</li></ol>"
+    });
+    ak.push("Sample: 1) Please lend me your scale for a minute. 2) Ma'am, may I go to the library? 3) I am sorry, let me pick it up.");
+
+    acts.push({
+      title: "Expressing Likes and Dislikes",
+      langKey: "complete_starter",
+      body: '<ol class="' + NS + 'q_list">' +
+        "<li>I like eating ________________________, but I do not like ________________________.</li>" +
+        "<li>I enjoy playing ________________________ with my friends.</li>" +
+        "<li>My favourite subject is ________________________.</li></ol>"
+    });
+    ak.push("Sample: 1) mangoes / bitter gourd 2) kabaddi / cricket 3) Science. (Accept all personal answers.)");
+
+    var dir = [
+      "Visitor: Excuse me, can you tell me the way to the post office?",
+      "Student: Sure! Walk straight down this road.",
+      "Student: Turn left near the bus stand. You will see it on your right.",
+      "Visitor: Thank you so much for your help!"
+    ];
+    acts.push({
+      title: "Asking for Directions — Arrange Conversation Sentences in Order (1 to 4)",
+      langKey: "order_events",
+      body: '<ol class="' + NS + 'q_list">' + shuffle(dir).map(function (d) { return "<li>[ &nbsp;&nbsp; ] &nbsp; " + esc(d) + "</li>"; }).join("") + "</ol>"
+    });
+    ak.push("Order: 1) " + dir[0] + " 2) " + dir[1] + " 3) " + dir[2] + " 4) " + dir[3]);
+
+    acts.push({
+      title: "Expressing Basic Feelings — Fill in the Blanks",
+      langKey: "respond_sit",
+      body: '<div class="' + NS + 'word_bank"><strong>Feeling Words:</strong> happy &nbsp;|&nbsp; tired &nbsp;|&nbsp; proud &nbsp;|&nbsp; hungry</div>' +
+        '<ol class="' + NS + 'q_list">' +
+        "<li>After running in the playground, I feel ______________.</li>" +
+        "<li>When I help my classmate understand a lesson, I feel ______________.</li>" +
+        "<li>Before lunch at 1:00 PM, I feel ______________.</li>" +
+        "<li>When I complete my work neatly, I feel ______________.</li></ol>"
+    });
+    ak.push("1) tired 2) happy / proud 3) hungry 4) proud / happy");
+
+    acts.push({
+      title: "Write a Short Dialogue Between Two Students (Daily Routine)",
+      langKey: "write_ind",
+      body: "<p><strong>Student 1:</strong> What time do you wake up every morning?</p>" +
+        "<p><strong>Student 2:</strong> ______________________________________________________________</p>" +
+        "<p><strong>Student 1:</strong> What do you do after school?</p>" +
+        "<p><strong>Student 2:</strong> ______________________________________________________________</p>"
+    });
+    ak.push("Sample: Student 2: I wake up at six o'clock. / After school, I play for a while and do my homework.");
+
+    acts.push({
+      title: "Talking About Family Members — Answer Simple Questions",
+      langKey: "answer_wh",
+      body: '<ol class="' + NS + 'q_list"><li>How many members are there in your family?' + writingLines(1) + "</li><li>Who helps you with your studies at home?" + writingLines(1) + "</li></ol>"
+    });
+    ak.push("Sample: 1) There are five members in my family. 2) My elder sister helps me with my studies.");
+
+    acts.push({
+      title: "Role-Play Speaking Practice (Teacher & Student) — Practise with a Partner",
+      langKey: "roleplay",
+      body: "<p><strong>Situation:</strong> Asking the teacher to explain a new word.</p>" +
+        "<p><strong>Student:</strong> Good afternoon, Ma'am. Excuse me, may I ask a doubt?<br>" +
+        "<strong>Teacher:</strong> Yes, please tell me.<br>" +
+        "<strong>Student:</strong> What is the meaning of the word 'peaceful'?<br>" +
+        "<strong>Teacher:</strong> 'Peaceful' means calm and quiet.<br>" +
+        "<strong>Student:</strong> Thank you, Ma'am. I understood it now.</p>" +
+        '<p><span class="' + NS + 'box_sq"></span> Practised speaking aloud with a partner / teacher</p>'
+    });
+    ak.push("Oral assessment checklist: Uses polite greetings ('Good afternoon', 'Excuse me', 'Thank you') and speaks clearly.");
+
+    return {
+      activities: acts,
+      answerKey: ak,
+      checklist: [
+        "Introduces self and greets friends and teachers politely",
+        "Asks for permission, help, and basic needs in English",
+        "Uses everyday expressions and responds appropriately",
+        "Participates in short pair dialogues and role-plays"
+      ]
+    };
+  }
+
+  /* ==========================================================================
+     11. WORK SHEET & ANSWER KEY RENDERERS
+     ========================================================================== */
+  function buildSheetData(cfg, idx) {
+    if (cfg.lo === "LO-1") {
+      if (cfg.stage === "letter") return buildLO1Letter(cfg);
+      if (cfg.stage === "word") return buildLO1Word();
+      if (cfg.stage === "sentence") return buildLO1Sentence(cfg);
+      return buildLO1Paragraph(cfg, idx);
+    }
+    if (cfg.lo === "LO-2") return buildLO2(cfg, idx);
+    if (cfg.lo === "LO-3") return buildLO3(cfg);
+    return buildLO4(cfg);
+  }
+
+  function renderWorksheet(cfg, data, num, total) {
+    var NS = sgflnpractice2026_NS;
+    var schoolStr = cfg.school ? esc(cfg.school) : "______________________________";
+    var distStr = cfg.district ? esc(cfg.district) : "____________________";
+    var teacherStr = cfg.teacher ? esc(cfg.teacher) : "______________________";
+    var studentStr = cfg.student ? esc(cfg.student) : "__________________________";
+    var stageHtml = cfg.lo === "LO-1" ? "<div><strong>Selected Stage:</strong> " + esc(sgflnpractice2026_STAGE_LABELS[cfg.stage]) + "</div>" : "";
+
+    var actsHtml = data.activities.map(function (a, i) {
+      return '<div class="' + NS + 'activity">' +
+        '<div class="' + NS + 'act_head">Activity ' + (i + 1) + ": " + esc(a.title) + langLine(a.langKey, cfg.lang) + "</div>" +
+        '<div class="' + NS + 'act_body">' + a.body + "</div></div>";
+    }).join("");
+
+    var checkHtml = data.checklist.map(function (c) {
+      return '<div><span class="' + NS + 'box_sq"></span> ' + esc(c) + "</div>";
+    }).join("");
+
+    return '<section class="' + NS + 'sheet">' +
+      '<div class="' + NS + 'watermark">SMARTGURUJI</div>' +
+      '<div class="' + NS + 'sheet_inner">' +
+        '<table class="' + NS + 'print_wrap">' +
+          '<thead><tr><th><div class="' + NS + 'repeat_head"><span>SMARTGURUJI – ENGLISH FLN WORK SHEET (' + esc(cfg.lo) + ')</span><span>Class ' + esc(cfg.cls) + ' | ' + esc(cfg.difficulty) + ' | Set ' + num + '</span></div></th></tr></thead>' +
+          '<tbody><tr><td>' +
+            '<div class="' + NS + 'ws_header">' +
+              '<div class="' + NS + 'ws_top">' +
+                '<div class="' + NS + 'ws_brand">SMARTGURUJI</div>' +
+                '<div class="' + NS + 'ws_title">ENGLISH FLN WORK SHEET' + (total > 1 ? " – SET " + num : "") + "</div>" +
+              "</div>" +
+              '<table class="' + NS + 'ws_meta">' +
+                "<tr><td><strong>School Name:</strong> " + schoolStr + "</td><td><strong>District:</strong> " + distStr + "</td></tr>" +
+                "<tr><td><strong>Student Name:</strong> " + studentStr + "</td><td><strong>Class:</strong> " + esc(cfg.cls) + " &nbsp;|&nbsp; <strong>Subject:</strong> English</td></tr>" +
+                "<tr><td><strong>Teacher Name:</strong> " + teacherStr + "</td><td><strong>Date:</strong> " + todayFormatted() + " &nbsp;|&nbsp; <strong>Duration:</strong> " + esc(cfg.duration) + " mins</td></tr>" +
+              "</table>" +
+              '<div class="' + NS + 'ws_lo_strip">' +
+                "<div><strong>Learning Outcome:</strong> " + esc(sgflnpractice2026_LO_TEXT[cfg.lo]) + "</div>" +
+                stageHtml +
+                "<div><strong>Practice Level:</strong> " + esc(cfg.difficulty) + " &nbsp;|&nbsp; <strong>Total Activities:</strong> " + data.activities.length + "</div>" +
+              "</div>" +
+            "</div>" +
+            (data.introHtml || "") +
+            actsHtml +
+            '<div class="' + NS + 'obs_box">' +
+              '<div class="' + NS + 'obs_title">Teacher Observation &amp; Learning Progress</div>' +
+              '<div class="' + NS + 'check_row">' +
+                '<span><span class="' + NS + 'box_sq"></span> Completed independently</span>' +
+                '<span><span class="' + NS + 'box_sq"></span> Completed with support</span>' +
+                '<span><span class="' + NS + 'box_sq"></span> Needs more practice</span>' +
+              "</div>" +
+              "<div style='margin-top:8px;'><strong>Skill Checklist (" + esc(cfg.lo) + "):</strong></div>" +
+              '<div style="margin-top:4px;">' + checkHtml + "</div>" +
+              '<div style="margin-top:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">' +
+                "<span><strong>Teacher Remarks:</strong> ____________________________________</span>" +
+                "<span><strong>Teacher Signature:</strong> ____________________</span>" +
+              "</div>" +
+            "</div>" +
+            '<div class="' + NS + 'ws_footer">' +
+              "<span>Prepared using SmartGuruji FLN WORK SHEET Generator.</span>" +
+              "<span>Page / Sheet " + num + " of " + total + "</span>" +
+            "</div>" +
+          "</td></tr></tbody>" +
+        "</table>" +
+      "</div>" +
+    "</section>";
+  }
+
+  function renderAnswerKey(cfg, allData) {
+    var NS = sgflnpractice2026_NS;
+    var body = allData.map(function (data, idx) {
+      return '<div style="margin-bottom:16px;">' +
+        '<h3 style="margin:0 0 8px 0;border-bottom:1.5px solid #000;padding-bottom:4px;">WORK SHEET ' + (idx + 1) + " – " + esc(cfg.lo) +
+        (cfg.lo === "LO-1" ? " (" + esc(sgflnpractice2026_STAGE_LABELS[cfg.stage]) + ")" : "") +
+        " | Class " + esc(cfg.cls) + " (" + esc(cfg.difficulty) + ")</h3>" +
+        data.answerKey.map(function (ans, i) {
+          return '<div class="' + NS + 'ak_item"><strong>Activity ' + (i + 1) + ":</strong> " + esc(ans) + "</div>";
+        }).join("") + "</div>";
+    }).join("");
+
+    return '<section id="' + NS + 'ak_container" class="' + NS + 'sheet ' + NS + 'ak_sheet">' +
+      '<div class="' + NS + 'watermark">SMARTGURUJI</div>' +
+      '<div class="' + NS + 'sheet_inner">' +
+        '<div class="' + NS + 'ak_banner">TEACHER\'S ANSWER KEY</div>' +
+        '<p style="margin:0 0 12px 0;font-style:italic;">Note: For open-ended writing and everyday communication activities, sample answers are provided. Accept any grammatically reasonable and meaningful student answer.</p>' +
+        body +
+        '<div class="' + NS + 'ws_footer">' +
+          "<span>Prepared using SmartGuruji FLN WORK SHEET Generator.</span>" +
+          "<span>Teacher's Answer Key</span>" +
+        "</div>" +
+      "</div>" +
+    "</section>";
+  }
+
+  /* ==========================================================================
+     12. DOM EVENTS, VALIDATION & PRINT ISOLATION
+     ========================================================================== */
+  function $(id) {
+    return document.getElementById(sgflnpractice2026_NS + id);
+  }
+
+  var akShown = true;
+  var hiddenSiblings = [];
+
+  function isolateForPrint() {
+    hiddenSiblings = [];
+    var el = $("root");
+    while (el && el.parentElement && el.tagName !== "BODY") {
+      var p = el.parentElement;
+      for (var i = 0; i < p.children.length; i++) {
+        var sib = p.children[i];
+        if (sib !== el && !sib.classList.contains(sgflnpractice2026_NS + "hide_in_print")) {
+          sib.classList.add(sgflnpractice2026_NS + "hide_in_print");
+          hiddenSiblings.push(sib);
+        }
+      }
+      el = p;
+    }
+  }
+
+  function restoreAfterPrint() {
+    for (var i = 0; i < hiddenSiblings.length; i++) {
+      hiddenSiblings[i].classList.remove(sgflnpractice2026_NS + "hide_in_print");
+    }
+    hiddenSiblings = [];
+  }
+
+  window.addEventListener("beforeprint", isolateForPrint);
+  window.addEventListener("afterprint", restoreAfterPrint);
+
+  function syncLOControls() {
+    var lo = $("lo").value;
+    $("lo_desc").textContent = sgflnpractice2026_LO_TEXT[lo] || "";
+    if (lo === "LO-1") {
+      $("stage_wrap").classList.remove(sgflnpractice2026_NS + "hidden");
+      $("focus_wrap").classList.add(sgflnpractice2026_NS + "hidden");
+    } else {
+      $("stage_wrap").classList.add(sgflnpractice2026_NS + "hidden");
+      $("focus_wrap").classList.remove(sgflnpractice2026_NS + "hidden");
+      var sel = $("focus");
+      sel.innerHTML = "";
+      var opts = sgflnpractice2026_FOCUS_OPTIONS[lo] || [];
+      for (var i = 0; i < opts.length; i++) {
+        var o = document.createElement("option");
+        o.value = opts[i].value;
+        o.textContent = opts[i].label;
+        sel.appendChild(o);
+      }
+    }
+  }
+
+  function readConfig() {
+    var cnt = parseInt($("count").value, 10);
+    if (isNaN(cnt) || cnt < 1 || cnt > 5) {
+      return { error: "Please enter a valid number of WORK SHEETs between 1 and 5." };
+    }
+    return {
+      school: $("school").value.trim(),
+      district: $("district").value,
+      teacher: $("teacher").value.trim(),
+      student: $("student").value.trim(),
+      cls: $("class").value,
+      lo: $("lo").value,
+      stage: $("stage").value,
+      focus: $("focus").value || "mixed",
+      difficulty: $("difficulty").value,
+      duration: $("duration").value,
+      count: cnt,
+      lang: $("lang").value,
+      includeAk: $("ak").value === "yes"
+    };
+  }
+
+  function generateWorksheets(isAnother) {
+    var err = $("error");
+    var stat = $("status");
+    err.classList.add(sgflnpractice2026_NS + "hidden");
+
+    var cfg = readConfig();
+    if (cfg.error) {
+      err.textContent = cfg.error;
+      err.classList.remove(sgflnpractice2026_NS + "hidden");
+      return;
+    }
+
+    var allData = [];
+    var out = [];
+    var offset = isAnother ? Math.floor(Math.random() * PASSAGES.length) : 0;
+
+    for (var i = 0; i < cfg.count; i++) {
+      var d = buildSheetData(cfg, i + offset);
+      allData.push(d);
+      out.push(renderWorksheet(cfg, d, i + 1, cfg.count));
+    }
+
+    if (cfg.includeAk) {
+      out.push(renderAnswerKey(cfg, allData));
+      akShown = true;
+      $("btn_toggle_ak").textContent = "Hide Answer Key";
+      $("btn_toggle_ak").classList.remove(sgflnpractice2026_NS + "hidden");
+    } else {
+      akShown = false;
+      $("btn_toggle_ak").classList.add(sgflnpractice2026_NS + "hidden");
+    }
+
+    $("print_area").innerHTML = out.join("");
+    stat.textContent = "Generated " + cfg.count + " WORK SHEET(s) for Class " + cfg.cls + " (" + cfg.lo + ", " + cfg.difficulty + " level) with " + allData[0].activities.length + " activities each.";
+    stat.classList.remove(sgflnpractice2026_NS + "hidden");
+  }
+
+  function printOrPdf(isPdf) {
+    if (!$("print_area").innerHTML.trim()) generateWorksheets(false);
+    if (isPdf) {
+      var stat = $("status");
+      stat.textContent = "In the print dialog, choose 'Save as PDF' as Destination and select A4 Portrait layout.";
+      stat.classList.remove(sgflnpractice2026_NS + "hidden");
+    }
+    isolateForPrint();
+    window.print();
+    setTimeout(restoreAfterPrint, 500);
+  }
+
+  function toggleAk() {
+    var akEl = $("ak_container");
+    if (!akEl) return;
+    akShown = !akShown;
+    if (akShown) {
+      akEl.classList.remove(sgflnpractice2026_NS + "hidden");
+      $("btn_toggle_ak").textContent = "Hide Answer Key";
+    } else {
+      akEl.classList.add(sgflnpractice2026_NS + "hidden");
+      $("btn_toggle_ak").textContent = "Show Answer Key";
+    }
+  }
+
+  function resetAll() {
+    $("form").reset();
+    $("subject").value = "English";
+    $("class").value = "6";
+    $("difficulty").value = "Developing";
+    $("duration").value = "30";
+    $("count").value = "1";
+    $("ak").value = "yes";
+    $("error").classList.add(sgflnpractice2026_NS + "hidden");
+    $("status").classList.add(sgflnpractice2026_NS + "hidden");
+    $("print_area").innerHTML = "";
+    syncLOControls();
+  }
+
+  $("lo").addEventListener("change", syncLOControls);
+  $("btn_gen").addEventListener("click", function () { generateWorksheets(false); });
+  $("btn_regen").addEventListener("click", function () { generateWorksheets(true); });
+  $("btn_print").addEventListener("click", function () { printOrPdf(false); });
+  $("btn_pdf").addEventListener("click", function () { printOrPdf(true); });
+  $("btn_toggle_ak").addEventListener("click", toggleAk);
+  $("btn_reset").addEventListener("click", resetAll);
+
+  syncLOControls();
+  generateWorksheets(false);
+})();
+</script>
+
+</body>
+</html>
